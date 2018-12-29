@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="text_file.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="groups.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="tasks.h" />
+    <ClInclude Include="cancellation.h" />
+    <ClInclude Include="datapar.h" />
+    <ClInclude Include="await.h" />
+    <ClInclude Include="text_file.h" />
+  </ItemGroup>
+</Project>

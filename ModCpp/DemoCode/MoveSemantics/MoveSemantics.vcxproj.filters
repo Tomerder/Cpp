@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mystring.h" />
+    <ClInclude Include="moving.h" />
+    <ClInclude Include="generalized_capture.h" />
+    <ClInclude Include="forwarding.h" />
+    <ClInclude Include="smart_ptr.h" />
+    <ClInclude Include="more_urefs.h" />
+    <ClInclude Include="parampassing.h" />
+    <ClInclude Include="this_ref_qualifiers.h" />
+  </ItemGroup>
+</Project>

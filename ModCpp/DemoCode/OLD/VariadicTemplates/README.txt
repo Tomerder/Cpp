@@ -1,0 +1,1 @@
+To build, download MinGW (tested with gcc 4.6.2), open the MinGW shell, navigate to this directory, and run `make'.

@@ -1,0 +1,12 @@
+﻿Build started 30/10/2017 14:04:34.
+     1>Project "C:\Users\hadraha.TRAINING\Desktop\ModCpp\Exercise2013\Exercise6\weather.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(362,5): warning MSB8003: Could not find WindowsSDKDir variable from the registry.  TargetFrameworkVersion or PlatformToolset may be set to an invalid version number.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\hadraha.TRAINING\Desktop\ModCpp\Exercise2013\packages\cpprestsdk.1.3.0\build\native\../..//build/native/include/ /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D HAS_CPPRESTSDK /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Exercise6.cpp
+         Exercise6.cpp
+     1>c:\users\hadraha.training\desktop\modcpp\exercise2013\packages\cpprestsdk.1.3.0\build\native\include\cpprest\xxpublic.h(47): fatal error C1083: Cannot open include file: 'BaseTsd.h': No such file or directory
+     1>Done Building Project "C:\Users\hadraha.TRAINING\Desktop\ModCpp\Exercise2013\Exercise6\weather.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.32

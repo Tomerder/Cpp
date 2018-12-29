@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Modernizing1.cpp" />
+    <ClCompile Include="Modernizing2.cpp" />
+    <ClCompile Include="Modernizing3.cpp" />
+    <ClCompile Include="Modernizing4.cpp" />
+    <ClCompile Include="Modernizing5.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Modernizing1.h" />
+    <ClInclude Include="Modernizing2.h" />
+    <ClInclude Include="Modernizing3.h" />
+    <ClInclude Include="Modernizing4.h" />
+    <ClInclude Include="Modernizing5.h" />
+  </ItemGroup>
+</Project>
