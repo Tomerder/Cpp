@@ -1,0 +1,14 @@
+﻿Build started 14/05/2014 07:47:12.
+     1>Project "C:\Users\dan\Dropbox\experis\dan_b\acpp\config\test\test.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(346,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\Ainclude /Zi /nologo /W1 /WX- /O2 /Oy- /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"test\\" /Fd"test\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\dan\dropbox\experis\dan_b\acpp\ainclude\uncopyable.h(15): error C2470: 'Uncopyable' : looks like a function definition, but there is no parameter list; skipping apparent body
+     1>C:\Users\dan\Dropbox\experis\dan_b\acpp\Ainclude\config.h(30): error C2470: 'Config' : looks like a function definition, but there is no parameter list; skipping apparent body
+     1>C:\Users\dan\Dropbox\experis\dan_b\acpp\Ainclude\config.h(37): fatal error C1189: #error :  only supporrts WIN32 and UNIX
+     1>Done Building Project "C:\Users\dan\Dropbox\experis\dan_b\acpp\config\test\test.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.08

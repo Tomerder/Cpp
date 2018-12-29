@@ -1,0 +1,5 @@
+$lib := ~/cpp/test/lab
+cp $lib/template.cpp $lib/$1.cpp
+gedit $lib/$1.cpp
+g+ $lib/$1.cpp -o $lib/$1
+$lib/$1

@@ -1,0 +1,13 @@
+CC=g++
+INC=../Ainclude
+CPPFLAGS= -ansi -pedantic -Wall $(LDFLAGS) -DUNIX -g -I $(INC) 
+
+include depends
+depends:
+	$(CC) -I $(INC) -MM $(OBJS:.o=.cpp) > depends
+	
+commit: $(OBJS)
+	ar rvs $(LIBDIR)libmy.a $(OBJS)
+
+clean:
+	rm depends $(OBJS) unitTest main.o

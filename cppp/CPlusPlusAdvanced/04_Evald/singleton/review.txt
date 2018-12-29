@@ -1,0 +1,8 @@
+add an example to the description. add some words about that the user can't instantiate an object explicitly
+maybe dtor should be private, and not generated? Evald will probably talk about it
+i think you should use reinterpret_cast instead of static_cast
+
+//
+dflt ctor ושיהיה נגיש לסינגלטון - מה שנדרש מ-T
+
+

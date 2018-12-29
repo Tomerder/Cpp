@@ -1,0 +1,7 @@
+#compile and nm object
+g+ -c $1.cpp -o $1.o
+echo "nm object"
+nm $1.o
+
+#clean object
+rm $1.o

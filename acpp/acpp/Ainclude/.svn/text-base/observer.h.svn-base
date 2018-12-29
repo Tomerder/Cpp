@@ -1,0 +1,63 @@
+/************************************************************************
+Observer design pattern
+Author: Dan Bar-On.
+Creation Date: 15.05.14 
+Modified at:
+Description: 
+************************************************************************/
+#ifndef OBSERVER_H
+#define OBSERVER_H
+
+#include <vector>
+
+// use of this class: as a data member of your broadcasting entity, or inherit from it.
+template <class CONC_SUBJ>
+class Subject
+{
+public:
+
+	explicit Subject();
+	virtual ~Subject();
+	
+	void Register();
+	void Unregister();
+
+private:
+	std::vector<CallBack<T, CONC_SUBJ>*> m_callBacks;
+
+};
+
+template <class T, class CONC_SUBJ>
+class CallBackBase
+{
+friend class Subject<CONC_SUBJ>;
+public:
+	CallBackBase(CONC_SUBJ*);	//register
+
+	void Notify(T) = 0;
+	void Detach();	//unregister
+private:
+	m_concSubj;
+};
+
+template <class T, class CONC_SUBJ, class CONC_OBSERVER, class ACTION >
+class CallBack : public CallBackBase<T, CONC_SUBJ>
+{
+public:
+	CallBack(CONC_OBSERVER*, CONC_SUBJ*, ACTION);
+	~CallBack();	//unregister
+	
+	void Notify(T);	//	CONC_OBSERVER::ACTION()
+
+private:
+	CONC_OBSERVER* m_observer;
+	ACTION m_action;
+	// CONC_SUBJ is at base
+};
+
+
+
+#endif // OBSERVER_H
+
+
+

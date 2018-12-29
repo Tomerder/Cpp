@@ -1,0 +1,52 @@
+#include <string.h>
+#include <iostream>
+
+#include "borrower.h"
+
+using namespace std;
+
+/*------------------------------------------------------------------------------------*/	
+/*static member initialization*/	
+unsigned int Borrower::m_count = 1;		
+
+/*------------------------------------------------------------------------------------*/	
+
+void Borrower::PrintWithBooksTaken() const 
+{
+	Print();
+	
+	cout << "List of books that are currently in his possesion : " << endl ; 
+	CItrBooks itr;
+	for(itr = m_mapOfBorrowedBooks.begin() ; itr != m_mapOfBorrowedBooks.end() ; itr++){ 
+		itr->second->Print();
+	}
+}
+
+/*------------------------------------------------------------------------------------*/	
+
+void Borrower::InsertBookToMap(unsigned int _isbn, LibraryBook* _libBook)
+{
+	m_mapOfBorrowedBooks[_isbn] = _libBook;
+}
+
+/*------------------------------------------------------------------------------------*/	
+void Borrower::EraseBookFromMap(unsigned int _isbn)
+{
+	m_mapOfBorrowedBooks.erase(_isbn) ;
+}
+/*------------------------------------------------------------------------------------*/	
+
+const LibraryBook* Borrower::getLibBookFromMap(unsigned int _isbn) const
+{
+	CItrBooks itr = m_mapOfBorrowedBooks.find(_isbn);
+	if( itr == m_mapOfBorrowedBooks.end()  ){
+		return NULL;
+	}
+	return itr->second;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------*/	
+

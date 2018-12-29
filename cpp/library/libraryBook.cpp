@@ -1,0 +1,28 @@
+#include <string.h>
+#include <iostream>
+
+#include "libraryBook.h"
+
+#include "borrower.h"
+
+using namespace std;
+
+/*------------------------------------------------------------------------------------*/	
+/*static member initialization*/	
+unsigned int LibraryBook::m_count = 1;		
+
+/*------------------------------------------------------------------------------------*/	
+
+void LibraryBook::PrintWithOwner() const
+{
+	Print();
+	if(m_curBorrower){	
+		cout << "currently borrowed by: " << m_curBorrower->getName() << " , cust num: " << m_curBorrower->getCustNum() <<endl;
+	}else{
+		cout << "present at library" << endl;
+	} 
+}
+
+
+
+/*------------------------------------------------------------------------------------*/	

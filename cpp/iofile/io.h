@@ -1,0 +1,55 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      02.01.14
+    Date last modified : 02.01.14
+    Description : io file
+***************************************************************************************/
+#ifndef __IO_ABS_H__
+#define __IO_ABS_H__
+
+#include<stdio.h>
+
+typedef enum{READ , WRITE , READ_WRITE} ACCESS;
+
+typedef enum {OK_E , CANT_OPEN_FILE_E , BAD_ACCESS_E , WRITE_ERR_E , READ_ERR_E} STATUS; 
+		
+ 
+class IO_ABS{   //abstract
+
+private: 	
+	ACCESS m_access;
+	
+	STATUS m_status;
+	
+	//will never be used
+	IO_ABS(const IO_ABS& _io);	
+	IO_ABS& operator=(const IO_ABS& _io);	
+	
+	//private read write methods - called from operators
+	virtual int write(const void* _dataToWrite, int _len) = 0 ; 	
+	virtual int read(void* _dataToRead, int _len) = 0 ; 
+
+protected:
+	void setStatus (STATUS _stat)  { m_status = _stat ;}
+	void setAccess (ACCESS _access)  { m_access = _access ;}
+
+public: 
+	IO_ABS() :  m_access(READ) ,  m_status(OK_E) {} 	
+	IO_ABS(ACCESS _access) : m_access(_access) ,  m_status(OK_E) {} 	
+	
+	virtual ~IO_ABS() {}	
+
+	void clearStatus ()  { m_status = OK_E ;}
+	
+	ACCESS getAccess() const {return m_access;}
+	STATUS getStatus() const {return m_status;}
+	
+	bool isGood() const {return (m_status == OK_E); }
+	bool isReadLegal() const;
+	bool isWriteLegal() const;
+};
+
+	
+#endif /*__IO_ABS_H__*/
+
+

@@ -1,0 +1,2 @@
+main.o: main.cpp ../../Ainclude/threadpool.h ../../Ainclude/uncopyable.h \
+ ../../Ainclude/waitableq.h ../../Ainclude/sync.h ../../Ainclude/thread.h

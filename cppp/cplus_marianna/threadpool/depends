@@ -1,0 +1,3 @@
+threadpool.o: threadpool.cpp ../Ainclude/threadpool.h \
+ ../Ainclude/uncopyable.h ../Ainclude/waitableq.h ../Ainclude/sync.h \
+ ../Ainclude/timespecExtension.h ../Ainclude/thread.h

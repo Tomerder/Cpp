@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ThreadPool" />
+		<Option makefile="makefile" />
+		<Option makefile_is_custom="1" />
+		<Option execution_dir="../marianna_s/cplus/threadpool" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../Abin/threadPoolBarbaricTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="$make -f $makefile" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile" />
+					<SilentBuild command="$make -s -f $makefile" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="../marianna_s/cplus/Abin/threadPoolBarbaricTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="$make -f $makefile" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile" />
+					<SilentBuild command="$make -s -f $makefile" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../../Ainclude/sync.h" />
+		<Unit filename="../../Ainclude/thread.h" />
+		<Unit filename="../../Ainclude/threadpool.h" />
+		<Unit filename="../../Ainclude/timespecExtension.h" />
+		<Unit filename="../../Ainclude/uncopyable.h" />
+		<Unit filename="../../Ainclude/waitableq.h" />
+		<Unit filename="../../sync/makefile" />
+		<Unit filename="../../sync/sync.cpp" />
+		<Unit filename="../../sync/test/main.cpp" />
+		<Unit filename="../../sync/test/makefile" />
+		<Unit filename="../../thread/test/main.cpp" />
+		<Unit filename="../../thread/test/makefile" />
+		<Unit filename="../makefile" />
+		<Unit filename="main.cpp" />
+		<Unit filename="makefile" />
+		<Unit filename="../threadpool.cpp" />
+		<Unit filename="../../timespecExtension/makefile" />
+		<Unit filename="../../timespecExtension/timespecExtension.cpp" />
+		<Unit filename="../../waitableq/test/main.cpp" />
+		<Unit filename="../../waitableq/test/makefile" />
+		<Unit filename="../../waitableq/waitableq.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

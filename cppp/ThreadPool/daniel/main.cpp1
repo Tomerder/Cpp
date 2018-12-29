@@ -1,0 +1,206 @@
+#include <iostream>
+#include <unistd.h>
+
+#include "semaphore.h"
+#include "mutex.h"
+#include "thread.h"
+#include "priorityqueue.h"
+#include "runnable.h"
+
+using namespace std;
+using namespace m10;
+
+// For Semaphore test
+void* Thread1(void* arg)
+{
+    Semaphore* s = static_cast<Semaphore*>(arg);
+    sleep(2);
+    s->Up();
+    return 0;
+}
+
+void SemaphoreThreads()
+{
+    Semaphore s(0);
+    pthread_t th;
+    pthread_create(&th, 0, Thread1, &s);
+    cout << "Blocking" << endl;
+    s.Down();
+    cout << "Unblocked" << endl;
+    pthread_join(th, 0);
+    cout << endl;
+}
+
+// For Mutex test
+void* Thread2(void* arg)
+{
+    Mutex* m = static_cast<Mutex*>(arg);
+
+    for (int i=1; i<5; ++i)
+    {
+        m->Lock();
+        cout << "Locked in thread2" << endl;
+        usleep(100);
+        cout << "Doing something in thread2" << endl;
+        usleep(100);
+        cout << "Unlocked thread2" << endl;
+        m->Unlock();
+        sleep(1);
+    }
+    return 0;
+}
+
+
+void MutexThreads()
+{
+    Mutex m;
+    pthread_t th;
+    pthread_create(&th, 0, Thread2, &m);
+    for (int i=1; i<5; ++i)
+    {
+        m.Lock();
+        cout << "Locked in thread1" << endl;
+        usleep(100);
+        cout << "Doing something in thread1" << endl;
+        usleep(100);
+        cout << "Unlocked thread1" << endl;
+        m.Unlock();
+        sleep(1);
+    }
+    pthread_join(th, 0);
+    cout << endl;
+}
+
+// For Thread test
+typedef void (*VV)(void);
+
+class RunnableDerived: public Runnable
+{
+public:
+    RunnableDerived(VV func): m_func(func) {}
+    virtual void operator()() {cout << " m_func" << endl; m_func();}
+    static void Func() {cout << "Func" << endl;}
+private:
+    VV m_func;
+};
+
+void RunnableFunc4Ever(void)
+{
+    while(1)
+    {cout << "4EVER" << endl;
+        sleep(1);
+    }
+}
+
+void RunnableFunc(void)
+{
+     cout << "Doing Something!!!!!" << endl;
+}
+
+RunnableDerived r4ever(RunnableFunc4Ever);
+RunnableDerived r(RunnableFunc);
+
+void ThreadJoinTOFails(void)
+{
+    Thread myThread(r4ever);
+
+    if (myThread.JoinTO(2))
+    {
+        myThread.Kill();
+        cout << "Thread killed" << endl;
+    }
+    else
+    {
+        cout << "Thread was joined" << endl;
+    }
+}
+
+void ThreadJoinTOSucceeds(void)
+{
+    Thread myThread(r);
+    myThread.JoinTO(2);
+}
+
+void ThreadFromMembFunction(void)
+{
+    Thread myThread(r);
+    myThread.Join();
+}
+
+void ThreadDeattach(void)
+{
+    Thread myThread(r4ever);
+    myThread.Deattach();
+}
+
+// For PriorityQueue test
+
+void PriorityQ(void)
+{
+    PriorityQueue<int> q;
+    q.Push(5);
+    cout << q.Pop() << endl;
+}
+
+void* ThreadPush(void* arg)
+{
+    sleep(1);
+    PriorityQueue<int>* q = static_cast<PriorityQueue<int>* >(arg);
+    cout << "Tying to push item" << endl;
+    q->Push(7);
+    return 0;
+}
+
+void PriorityQ2Threads(void)
+{
+    pthread_t thread;
+    PriorityQueue<int> q;
+    cout << "waiting for an item" << endl;
+    pthread_create(&thread, 0, ThreadPush, &q);
+    int item = q.Pop();
+    cout << "Item is " << item << endl;
+    pthread_join(thread, 0);
+    cout << endl;
+}
+
+void* PrintMe(void*)
+{
+    cout << "THREAD: Thread ID is " << Thread::GetID() << endl;
+}
+
+
+int main()
+{
+    /*cout << "Test #1" << endl;
+    SemaphoreThreads();
+    cout << endl << endl;
+
+    cout << "Test #2" << endl;
+    MutexThreads();
+    cout << endl << endl;
+
+    cout << "Test #3" << endl;
+    ThreadJoinTOFails();
+
+    cout << "Test #4" << endl;
+    ThreadJoinTOSucceeds();
+
+    cout << "Test #5" << endl;
+    ThreadFromMembFunction();
+
+    cout << "Test #6" << endl;
+    ThreadDeattach();
+
+    cout << "Test #7" << endl;
+    PriorityQ();
+
+    cout << "Test #8" << endl;
+    PriorityQ2Threads();*/
+
+    pthread_t th;
+    pthread_create(&th, 0, PrintMe, 0);
+    cout << "Main: Thread ID is " << th << endl;
+    pthread_join(th, 0);
+
+    return 0;
+}

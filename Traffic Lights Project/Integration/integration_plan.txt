@@ -1,0 +1,54 @@
+Integration plan - 13/5 14:00
+=============================
+
+Phase I - starting ~ 14/5 08:00
+______________________________
+1. Communication module works + Log (minimal)
+         + configuration read
+
+2. Sceleton structures of the 3 SubSystems in place
+    (communication with const data)
+
+3. Session initiation sequence (ready-ready-start)
+
+4. OA&M and TrafficControl receive and log events 
+
+5. Runs on a Single Station, Multiple stations
+
+6. Basic testing of exceptions - 
+        - Network abnormal events (plugging out and in)
+
+Phase II - starting ~ 14/5  14:00
+_____________________________________ 
+5. Additional Infrastructure integrated into SubSystems
+        : State machine, Terminal 
+
+6. Behavior typical
+
+7. Behavior Operational full testing
+
+Phase III - starting ~ 15/5  08:00
+________________________________________________ 
+8. Behavior with complex (stop, pause continue, insert event, crash out of crash...)
+9. System Up, Down, change of config
+
+
+
+____________________________________________________________________________
+1. Set-up infrastructure library + missing functionality 
+    (logging to file + screen, etc)
+    -- 13/5/14 16:00
+
+2. ApplicationModule (TrControl, Emmulation, OAM) - 
+    dummies with internal functions as NoOp
+    -- 13/5/14 17:00->...
+
+3. Communication framework - 3 ApplicationModules, Comm set-up,
+    basic message exchange
+    -- 14/5/14 12:00
+
+4. OA&M interface mock-up test
+    -- 14/5/14 14:00
+
+5. Run builds as functionality is being added to the ApplicationModules
+

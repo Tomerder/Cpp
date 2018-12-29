@@ -1,0 +1,63 @@
+#include <iostream>
+#include <string.h>
+
+#include "building.h"
+#include "street.h"
+#include "city.h"
+
+using namespace std;
+
+void test();
+
+/*------------------------------------------------------------------------------------*/
+int main() 
+{
+	test();
+	
+	
+	return 0;
+}
+/*------------------------------------------------------------------------------------*/
+
+void test()
+{
+	Building_t<int> bld1(5);
+	Building_t<int> bld2(7);
+		
+	Street_t<string,int> street("Moshe Sharet");
+	
+	City_t<string, string, int> city("haifa");
+	
+
+	street.addBuilding2Street(&bld1);
+	street.addBuilding2Street(&bld2);
+
+	city.addStreet2City(&street);
+	
+	const Building_t<int>* bldToGet = street.getBuilding(5);
+	if(bldToGet){	
+		cout << "building number : " << bldToGet->getId() << " was found" << endl;  
+	}
+
+	const Street_t<string,int>* streetToGet = city.getStreet("Moshe Sharet");
+	if(streetToGet){	
+		cout << "street  : " << streetToGet->getId() << " was found" << endl; 
+	}
+
+	City_t<string, string, int> cityCpy(city);
+	
+	streetToGet = cityCpy.getStreet("Moshe Sharet");
+	if(streetToGet){
+		cout << "street  : " << streetToGet->getId() << " was found on copyed city" << endl; 
+	}
+
+	City_t<string, string, int> cityAsign;
+	cityAsign = cityCpy;
+
+	streetToGet = cityAsign.getStreet("Moshe Sharet");
+	if(streetToGet){
+		cout << "street  : " << streetToGet->getId() << " was found on city from asignment" << endl; 
+	}
+	
+	
+}

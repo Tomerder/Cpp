@@ -1,0 +1,294 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Times New Roman;}{\f4\froman\fprq0\fcharset1 Times New Roman;}{\f5\froman\fprq0\fcharset1 Liberation Serif{\*\falt Times New Roman};}{\f6\fswiss\fprq0\fcharset1 Liberation Sans{\*\falt Arial};}{\f7\fnil\fprq0\fcharset1 WenQuanYi Micro Hei;}{\f8\fnil\fprq0\fcharset1 Lohit Hindi;}}
+{\colortbl;\red0\green0\blue0;\red128\green0\blue0;\red0\green0\blue0;\red128\green128\blue128;}
+{\stylesheet{\s0\snext0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033 Default Style;}
+{\*\cs15\snext15 Endnote Characters;}
+{\s16\sbasedon0\snext17\ql\nowidctlpar\sb240\sa120\keepn\ltrpar\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs28\alang1081\loch\f6\fs28\lang1033 Heading;}
+{\s17\sbasedon0\snext17\ql\nowidctlpar\sb0\sa120\ltrpar\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033 Text Body;}
+{\s18\sbasedon17\snext18\ql\nowidctlpar\sb0\sa120\ltrpar\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033 List;}
+{\s19\sbasedon0\snext19\ql\nowidctlpar\sb120\sa120\noline\ltrpar\cf0\i\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\ai\loch\f5\fs24\lang1033 Caption;}
+{\s20\sbasedon0\snext20\ql\nowidctlpar\noline\ltrpar\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033 Index;}
+}{\*\listtable{\list\listtemplateid1
+{\listlevel\levelnfc4\leveljc2\levelstartat1\levelfollow0{\leveltext \'03\u0\'00) ;}{\levelnumbers\'01;}\fi-360\li720}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u1\'01.;}{\levelnumbers\'01;}\fi-360\li1080}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u2\'02.;}{\levelnumbers\'01;}\fi-360\li1440}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u3\'03.;}{\levelnumbers\'01;}\fi-360\li1800}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u4\'04.;}{\levelnumbers\'01;}\fi-360\li2160}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u5\'05.;}{\levelnumbers\'01;}\fi-360\li2520}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u6\'06.;}{\levelnumbers\'01;}\fi-360\li2880}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u7\'07.;}{\levelnumbers\'01;}\fi-360\li3240}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u8\'08.;}{\levelnumbers\'01;}\fi-360\li3600}\listid1}
+{\list\listtemplateid2
+{\listlevel\levelnfc0\leveljc2\levelstartat1\levelfollow0{\leveltext \'02\u0\'00.;}{\levelnumbers\'01;}\fi-360\li720}
+{\listlevel\levelnfc4\leveljc2\levelstartat1\levelfollow0{\leveltext \'02\u1\'01.;}{\levelnumbers\'01;}\fi-360\li1080}
+{\listlevel\levelnfc2\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u2\'02.;}{\levelnumbers\'01;}\fi-360\li1440}
+{\listlevel\levelnfc0\leveljc2\levelstartat1\levelfollow0{\leveltext \'02\u3\'03.;}{\levelnumbers\'01;}\fi-360\li1800}
+{\listlevel\levelnfc4\leveljc2\levelstartat1\levelfollow0{\leveltext \'02\u4\'04.;}{\levelnumbers\'01;}\fi-360\li2160}
+{\listlevel\levelnfc2\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u5\'05.;}{\levelnumbers\'01;}\fi-360\li2520}
+{\listlevel\levelnfc0\leveljc2\levelstartat1\levelfollow0{\leveltext \'02\u6\'06.;}{\levelnumbers\'01;}\fi-360\li2880}
+{\listlevel\levelnfc4\leveljc2\levelstartat1\levelfollow0{\leveltext \'02\u7\'07.;}{\levelnumbers\'01;}\fi-360\li3240}
+{\listlevel\levelnfc2\leveljc0\levelstartat1\levelfollow0{\leveltext \'02\u8\'08.;}{\levelnumbers\'01;}\fi-360\li3600}\listid2}
+{\list\listtemplateid3
+{\listlevel\levelnfc255\leveljc0\levelstartat1\levelfollow2{\leveltext \'00;}{\levelnumbers;}\fi-432\li432}
+{\listlevel\levelnfc255\leveljc0\levelstartat1\levelfollow2{\leveltext \'00;}{\levelnumbers;}\fi-576\li576}
+{\listlevel\levelnfc255\leveljc0\levelstartat1\levelfollow2{\leveltext \'00;}{\levelnumbers;}\fi-720\li720}
+{\listlevel\levelnfc255\leveljc0\levelstartat1\levelfollow2{\leveltext \'00;}{\levelnumbers;}\fi-864\li864}
+{\listlevel\levelnfc255\leveljc0\levelstartat1\levelfollow2{\leveltext \'00;}{\levelnumbers;}\fi-1008\li1008}
+{\listlevel\levelnfc255\leveljc0\levelstartat1\levelfollow2{\leveltext \'00;}{\levelnumbers;}\fi-1152\li1152}
+{\listlevel\levelnfc255\leveljc0\levelstartat1\levelfollow2{\leveltext \'00;}{\levelnumbers;}\fi-1296\li1296}
+{\listlevel\levelnfc255\leveljc0\levelstartat1\levelfollow2{\leveltext \'00;}{\levelnumbers;}\fi-1440\li1440}
+{\listlevel\levelnfc255\leveljc0\levelstartat1\levelfollow2{\leveltext \'00;}{\levelnumbers;}\fi-1584\li1584}\listid3}
+}{\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}{\info{\author a004166}{\creatim\yr2003\mo4\dy21\hr12\min7}{\revtim\yr2008\mo2\dy26\hr7\min29}{\printim\yr0\mo0\dy0\hr0\min0}{\comment LibreOffice}{\vern4000}}\deftab720
+\viewscale140
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse451\pgwsxn12240\pghsxn15840\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\pgdscnxt0 Default Style;}
+{\pgdsc1\pgdscuse451\pgndec\pgwsxn12240\pghsxn15840\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\pgdscnxt1 Endnote;}}
+\formshade{\*\pgdscno0}\paperh15840\paperw12240\margl1800\margr1800\margt1440\margb1440\sectd\sbknone\sectunlocked1\pgndec\pgwsxn12240\pghsxn15840\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart65536\aftnnar
+\pgndec\pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs36\alang1037\rtlch \ltrch\loch\fs36\loch\f4
+\tab \tab \tab \tab }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\b\langfe1033\afs36\alang1037\ab\rtlch \ltrch\loch\fs36\loch\f4
+\tab \tab }{\ul\ulc1\b\langfe1033\afs36\alang1037\ab\rtlch \ltrch\loch\fs36\loch\f4
+Parser & Syntax/Semantic Analyzer }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+Parser is a program which reads input ASCII files and analyzes them.}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+Parser reads input lines and divides them into tokens. The delimiter between tokens can be \u8216\'18blank(s)\u8217\'19 or \u8216\'18tab(s)\u8217\'19 characters. All tokens are divided into 2 kinds - predefined and user-defined. Following is a list}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+of predefined tokens:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri720\lin0\rin720\fi720{\ul\ulc1\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+Predefined Types}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri720\lin720\rin720\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\fs20\loch\f4
+ \u8220\'1c}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+char\u8221\'1d, \u8220\'1cshort\u8221\'1d, \u8220\'1cint\u8221\'1d, \u8220\'1clong\u8221\'1d, \u8220\'1cfloat\u8221\'1d, \u8220\'1cdouble\u8221\'1d, \u8220\'1cvoid\u8221\'1d}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri720\lin0\rin720\fi720\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+\tab }{\ul\ulc1\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+Key words , group 1}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \u8220\'1cif\u8221\'1d, \u8220\'1celse\u8221\'1d, \u8220\'1cfor\u8221\'1d , \u8220\'1cwhile\u8221\'1d}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+\tab }{\ul\ulc1\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+Key words , group 2}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \u8220\'1cclass\u8221\'1d, \u8220\'1cprivate\u8221\'1d, \u8220\'1cpublic\u8221\'1d, \u8220\'1cprotected\u8221\'1d, \u8220\'1cmain\u8221\'1d, \u8220\'1cconst\u8221\'1d, \u8220\'1cvirtual\u8221\'1d}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab }{\ul\ulc1\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+Operators:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \u8220\'1c++\u8221\'1d, \u8220\'1c--\u8220\'1c, \u8220\'1c==\u8221\'1d, \u8220\'1c->\u8221\'1d , \u8220\'1c=\u8221\'1d, \u8220\'1c+\u8221\'1d, \u8220\'1c-\u8220\'1c, \u8220\'1c*\u8221\'1d, \u8220\'1c&\u8221\'1d, \u8220\'1c<<\u8221\'1d, \u8220\'1c>>\u8221\'1d}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+\tab Following predefined tokens also play a role of delimiter:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \u8220\'1c(\u8220\'1c, \u8221\'1d), \u8220\'1c[\u8220\'1c, \u8220\'1c]\u8221\'1d , \u8220\'1c\{\u8220\'1c , \u8220\'1c\}\u8221\'1d \u8220\'1c;\u8221\'1d \u8220\'1c<\u8221\'1d, \u8220\'1c>\u8221\'1d , \u8220\'1c=\u8221\'1d, \u8220\'1c+\u8221\'1d, \u8220\'1c-\u8220\'1c, \u8220\'1c*\u8221\'1d, \u8220\'1c&\u8221\'1d}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri720\lin0\rin720\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\fs20\loch\f4
+ }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab }{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+Example:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab }{\cf2\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+if(a)}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+ really 4 tokens : }{\cf2\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+'if'}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+,  '}{\cf2\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+(}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+'  ,  '}{\cf2\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+a}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+',   '}{\cf2\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+)}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+'}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+Parser program has to count number of input lines, number of tokens  in input file.}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+Syntax/Semantic analyzer has to check the syntax of each input line.}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+A statement can take more than one line.}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\pagebb\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\ul\ulc1\b\langfe1033\afs28\alang1037\ab\rtlch \ltrch\loch\fs28\loch\f4
+Language Rules:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033{\listtext\pard\plain  1.\tab}\ilvl0\ls2 \li1440\ri0\lin1440\rin0\fi-360\widctlpar\tx2880\faauto\li720\ri0\lin720\rin0\fi-360{\b\langfe1033\alang1037\ab\rtlch \ltrch\loch\loch\f4
+The program has to start from "}{\cf2\b\langfe1033\alang1037\ab\rtlch \ltrch\loch\loch\f4
+main}{\b\langfe1033\alang1037\ab\rtlch \ltrch\loch\loch\f4
+" function.}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li360\ri0\lin360\rin0\fi0{\cf2\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+int i;\tab \tab \tab // illegal - declaration before 'main'}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li360\ri0\lin360\rin0\fi0{\cf2\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+main \{}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li360\ri0\lin360\rin0\fi720{\cf2\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\fs20\loch\f4
+\u8230\'26}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li360\ri0\lin360\rin0\fi0{\cf2\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+\}\tab }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033{\listtext\pard\plain  2.\tab}\ilvl0\ls2 \li1440\ri0\lin1440\rin0\fi-360\widctlpar\tx2880\faauto\li720\ri0\lin720\rin0\fi-360{\b\langfe1033\alang1037\ab\rtlch \ltrch\loch\loch\f4
+Any sequence of tokens is legal except the list of Possible Errors ( see below).}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033{\listtext\pard\plain  3.\tab}\ilvl0\ls2 \li1440\ri0\lin1440\rin0\fi-360\widctlpar\tx2880\faauto\li720\ri0\lin720\rin0\fi-360{\b\langfe1033\alang1037\ab\rtlch \ltrch\loch\loch\f4
+Possible errors:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033{\listtext\pard\plain  a) \tab}\ilvl0\ls1 \li2160\ri360\lin2160\rin360\fi-360\widctlpar\faauto\li1440\ri360\lin1440\rin360\fi-360{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+Number of open braces doesn\u8217\'19t match number of close braces.}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri720\lin1440\rin720\fi0{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+([a) \tab - }{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+is illegal }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri720\lin1440\rin720\fi0{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+) (}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+ \tab - is illegal  \u8216\'18(\u8216\'18 has to be before \u8216\'18)\u8217\'19}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri720\lin720\rin720\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033{\listtext\pard\plain  b) \tab}\ilvl0\ls1 \li2160\ri360\lin2160\rin360\fi-360\widctlpar\faauto\li1440\ri360\lin1440\rin360\fi-360{\langfe1033\afs20\alang1037\rtlch \ltrch\fs20\loch\f4
+\u8216\'18}{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+else\u8217\'19}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+ without \u8216\'18}{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+if\u8217\'19}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033{\listtext\pard\plain  c) \tab}\ilvl0\ls1 \li2160\ri360\lin2160\rin360\fi-360\widctlpar\faauto\li1440\ri360\lin1440\rin360\fi-360{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+multiple }{\ul\ulc1\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+Predefined Types}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+::}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri0\lin1440\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+int short k;\tab \tab // line 12 : error, error multiple type declaration}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri0\lin1440\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \tab // line12 : k isn't defined}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri0\lin1440\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+double char c;\tab \tab // line 14: error, error multiple type declaration}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri0\lin1440\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \tab // line 14: c isn't defined}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri0\lin1440\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\fs20\loch\f4
+\u8230\'26}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033{\listtext\pard\plain  d) \tab}\ilvl0\ls1 \li2160\ri360\lin2160\rin360\fi-360\widctlpar\faauto\li1440\ri360\lin1440\rin360\fi-360{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+illegal operators,  examples:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri720\lin1440\rin720\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
++++ , ---\tab \tab \tab \tab // er}{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+ror, no operator +++ or ---}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033{\listtext\pard\plain  e) \tab}\ilvl0\ls1 \li2160\ri360\lin2160\rin360\fi-360\widctlpar\faauto\li1440\ri360\lin1440\rin360\fi-360{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+already declared:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri360\lin1440\rin360\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+int k;}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri360\lin1440\rin360\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+float k;\tab \tab \tab \tab // line 20 : error, variable '}{\cf2\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+k}{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+' already declared}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li1440\ri360\lin1440\rin360\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\fs20\loch\f4
+  }{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+f) \tab foo() \{\tab \tab \tab }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab abc\tab \tab \tab // line 112 : }{\cf2\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+abc}{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+ is not defined}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \u8230\'26}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+\tab \}\tab \tab }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0{\b\langfe1033\alang1037\ab\rtlch \ltrch\loch\loch\f4
+Notes: }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+a)\tab the following code is }{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+legal}{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+\tab const virtual const const private}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+b)\tab the following code is }{\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+illegal}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0{\b0\langfe1033\afs20\alang1037\ab0\rtlch \ltrch\loch\fs20\loch\f4
+\tab int virtual}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li720\ri0\lin720\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\pagebb\widctlpar\faauto\li0\ri0\lin0\rin0\fi720\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\ul\ulc1\b\langfe1033\afs20\alang1037\ab\rtlch \ltrch\loch\fs20\loch\f4
+Example:}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\}\tab \tab \tab \tab \tab // }{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+line 1: }{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+error, 'main' has to be the first\tab }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\fs20\loch\f4
+ }{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \tab \tab \tab // }{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+line 1: }{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+error, \u8220\'1c\}\u8221\'1d without \u8220\'1c\{\u8220\'1c}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+int short k;\tab \tab \tab \tab // }{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+line 2: }{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+error, multiple type}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+else a= b\tab \tab \tab \tab \tab // error, \u8220\'1celse\u8221\'1d without \u8220\'1cif\u8221\'1d}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \tab \tab \tab // error, no 'main()' function before}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li-720\ri0\lin-720\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \tab }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+if (i<10) \{}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab i=0;}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \} else \{}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab i++;}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \}}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+\tab \tab \tab \tab \tab  }
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720{\rtlch \ltrch\loch
+\{ [[}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi720{\langfe1033\afs20\alang1037\rtlch \ltrch\loch\fs20\loch\f4
+kkk --- aaa\tab \tab \tab \tab // error, illegal operator \u8220\'1c---\u8221\'1d}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\rtlch \ltrch\loch
+\tab int}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\rtlch \ltrch\loch
+\tab float\tab \tab \tab \tab \tab // }{\rtlch \ltrch\loch
+line 20: }{\afs20\rtlch \ltrch\loch\fs20
+error multiple type declaration}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\rtlch \ltrch\loch
+\tab k}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\rtlch \ltrch\loch
+\tab }{{\*\bkmkstart __DdeLink__437_1639798462}\rtlch \ltrch\loch{\*\bkmkend __DdeLink__437_1639798462}
+Error : 1 \{ not closed}
+\par \pard\plain \s0\ql\nowidctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f5\fs24\lang1033\widctlpar\faauto\li0\ri0\lin0\rin0\fi0{\rtlch \ltrch\loch
+\tab Error : 2 [ not closed}
+\par }

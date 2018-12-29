@@ -1,0 +1,24 @@
+CXX=g++
+INCDIR=../Ainclude
+CXXFLAGS=-g -ansi -pedantic -Wall -Werror -I $(INCDIR) $(CFLAGS2)
+
+# the library makefile should include the definitions:
+#OBJS: object file names from the directory
+#LIBFILE: names of the archive file
+#CFLAGS2: additional compilation flags
+
+# archive
+$(LIBFILE): $(LIBFILE)($(OBJS))
+
+# include list of depedencies, create if doesn't exist
+# if dependencies changed, need to manually delete "depends"
+include depends
+depends:
+	$(CC) -I $(INCDIR) -MM $(OBJS:.o=.cpp) > depends
+
+# delete object files, dependency list
+.PHONEY: clean
+clean:
+	rm depends $(OBJS)
+
+

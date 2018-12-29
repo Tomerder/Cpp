@@ -1,0 +1,1 @@
+mystring.o: mystring.cpp ../Ainclude/mystring.h

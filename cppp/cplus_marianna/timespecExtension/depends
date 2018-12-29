@@ -1,0 +1,2 @@
+timespecExtension.o: timespecExtension.cpp \
+ ../Ainclude/timespecExtension.h ../Ainclude/uncopyable.h

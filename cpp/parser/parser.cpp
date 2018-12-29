@@ -1,0 +1,119 @@
+#include <string.h>
+#include <iostream>
+#include <fstream>
+
+#include "parser.h"
+
+using namespace std;
+
+#define NUM_OF_TYPES 7
+
+#define NUM_OF_SYMBOLS 42
+
+
+/*--------------------------------------------------------------------------------*/
+
+Parser::Parser(string _flags)
+{
+	/*allocate DM*/
+	m_tokenaizer = new Tokenaizer; 
+	m_analizer = new Analizer; 
+
+	/*initialize all delimiters at class Tokenizer*/
+	m_tokenaizer->SetDelimiters (  "()[]{};<>=+-*& \t"  );
+	
+	/*initialize types at class Analizer*/
+	vector<string> vecTypes;
+	string types[NUM_OF_TYPES] = {  "char", "short", "int", "long", "float", "double", "void" };
+	for(int i=0 ; i<NUM_OF_TYPES; i++){
+		vecTypes.push_back(types[i]);
+	} 
+	m_analizer->AddTypes (  vecTypes );  
+	
+	/*initialize types at class Analizer*/
+	vector<string> vecSymbols;
+	string symbols[NUM_OF_SYMBOLS] = {  "char", "short", "int", "long", "float", "double", "void" 
+										 "if", "else", "for" , "while"
+										 "class", "private", "public", "protected", "main", "const", "virtual"
+										 "++", "--", "==", "->" , "=", "+", "-", "*", "&", "<<", ">>"
+										 "(", ")" , "[", "]" , "{" , "}" , ";" , "<", ">" , "=", "+", "-", "*", "&"	 };
+	for(int i=0 ; i<NUM_OF_TYPES; i++){
+		vecSymbols.push_back(symbols[i]);
+	} 
+	m_analizer->AddSymbols (  vecSymbols );  
+		
+} 	
+
+/*--------------------------------------------------------------------------------*/	
+
+Parser::~Parser()
+{
+	delete m_tokenaizer;
+	delete m_analizer;
+}
+
+/*--------------------------------------------------------------------------------*/	
+
+bool Parser::GetLinesFromFile(const string& _fileName)
+{
+	ifstream input(_fileName.c_str());
+	string line;	
+
+	if ( ! input.is_open() ){
+		return false;
+	}
+
+	while (getline(input, line))
+    {
+        m_fileLines.push_back(line);
+    }
+
+	input.close();
+
+	return true;;
+
+}
+
+/*--------------------------------------------------------------------------------*/	
+
+
+void Parser::ParseFile()
+{
+	
+	/*tokens of each line*/
+	deque<string> lineTokens; 
+	string line;
+	size_t lineNum;
+	
+	for(lineNum = 1; lineNum <= m_fileLines.size() ; lineNum++)
+	{	
+		line = m_fileLines[lineNum-1];
+	
+		m_tokenaizer->SetLineToTokenize(line);
+		m_numOfTokens += m_tokenaizer->CreateTokens();
+		
+		//m_analizer->SetTokens( m_tokenaizer->GetTokens() , lineNum);
+		//m_analizer->Analize();
+		
+	}
+
+	//m_analizer->AnalizeEnd();
+
+	/*print 1.num of lines, 2.num of tokens , 3.list of errors*/
+	//m_analizer->PrintErrors();
+
+}
+
+/*--------------------------------------------------------------------------------*/	
+
+
+
+
+
+
+
+
+
+	
+	
+

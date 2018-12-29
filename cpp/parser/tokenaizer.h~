@@ -1,0 +1,53 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      19.1.14
+    Date last modified : 19.1.14
+    Description : Parser
+***************************************************************************************/
+#ifndef __TOKENAIZER_H__
+#define __TOKENAIZER_H__
+
+#include <string>
+#include <deque>
+
+using namespace std;
+
+/*--------------------------------------------------------------------------------*/
+
+class Tokenaizer{   
+
+private: 		
+	string m_delimiters;	
+		
+	string m_lineToTokenize;
+	deque<string> m_tokensCreated;
+	
+	/*will never be use*/
+	Tokenaizer(const Tokenaizer& _tock);	
+	Tokenaizer& operator=(const Tokenaizer& _tock);
+	
+public: 
+	Tokenaizer() {} 	
+		
+	virtual ~Tokenaizer() {}	
+	
+	const string& GetDelimiters() const {return m_delimiters;}
+	
+	void SetDelimiters(string _delimiters) {m_delimiters = _delimiters;}
+	
+	void ClearDelimiters() { m_delimiters.clear(); } 
+	
+	void SetLineToTokenize(string _line) { m_lineToTokenize = _line; } 
+	
+	const deque<string>& GetTokens() const { return m_tokensCreated; } 
+	
+	/*will set _tokensCreated with tokens from line.  returns number of tokens*/
+	virtual size_t CreateTokens();
+
+};
+
+/*--------------------------------------------------------------------------------*/
+	
+#endif /*__TOKENAIZER_H__*/
+
+

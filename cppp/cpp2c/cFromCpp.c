@@ -1,0 +1,363 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*------------------------------------------------------------------*/
+
+#define TO_SHAPE(SHAPE) ((Shape*)SHAPE)
+#define TO_CIRCLE(CIRCLE) ((Circle*)CIRCLE)
+#define TO_SQUARE(SQUARE) ((Square*)SQUARE)
+
+/*------------------------------------------------------------------*/
+
+static int NShapes = 0;;
+
+typedef struct Shape{
+	void (**m_VT) (void);   /*pointer to VT => pointer to arr of funcs*/	
+	int m_id;  	            /*protected*/
+}Shape;
+
+/*------------------------------------------------------------------*/
+
+/*forward dec*/
+void Shape_Ctor(void* _adr);
+void Shape_Dtor(Shape* _this);
+void Shape_Draw_This(Shape* _this);
+void Shape_CopyCtor(void* _adr, Shape* _other);
+static void PrintNShapes();
+
+/*------------------------------------------------------------------*/
+
+/* Shape VT */
+typedef  void(*FUNC)(void);
+
+FUNC g_ShapeVT[] = { (FUNC)Shape_Dtor , (FUNC)Shape_Draw_This };
+
+//void (*g_ShapeVT[]) (void)  = { (FUNC)Shape_Dtor , (FUNC)Shape_Draw_This };
+
+/*------------------------------------------------------------------*/
+
+void Shape_Ctor(void* _adr) 
+{
+	TO_SHAPE(_adr)->m_VT = g_ShapeVT;
+	TO_SHAPE(_adr)->m_id = ++NShapes;
+	printf("Shape::Ctor()%d\n", TO_SHAPE(_adr)->m_id);
+}
+
+void Shape_Dtor(Shape* _this) 
+{
+	--NShapes;
+	printf("Shape::Dtor()%d\n", _this->m_id);
+}
+
+void Shape_Draw_This(Shape* _this)
+{
+	printf("Shape::Draw() : %d\n", _this->m_id);
+}
+
+static void PrintNShapes() 
+{ 
+	printf("NShapes: %d\n",NShapes);
+}
+
+void Shape_CopyCtor(void* _adr, Shape* _other) 
+{
+	TO_SHAPE(_adr)->m_VT = g_ShapeVT;
+	TO_SHAPE(_adr)->m_id = ++NShapes;
+	printf("Shape::CCtor()%d\n", TO_SHAPE(_adr)->m_id);
+}
+
+/*------------------------------------------------------------------*/
+
+typedef struct Circle{
+	Shape m_shape;
+	int m_radius;       /*private*/
+}Circle;
+
+/*------------------------------------------------------------------*/
+
+/*forward dec*/
+void Circle_Ctor(void* _adr);
+void Circle_CopyCtor(void* _adr, Circle* _other);
+void Circle_Draw_This(Circle* _this);
+void Circle_Dtor(Circle* _this);
+void Circle_Radius_This(Circle* _this);
+
+/*------------------------------------------------------------------*/
+
+/* Circle VT */
+FUNC g_CircleVT[] = { (FUNC)Circle_Dtor , (FUNC)Circle_Draw_This , (FUNC)Circle_Radius_This };
+
+//void (*g_CircleVT[]) (void)  = { (FUNC)Circle_Dtor , (FUNC)Circle_Draw_This , (FUNC)Circle_Radius_This };
+
+/*------------------------------------------------------------------*/
+
+void Circle_Ctor(void* _adr)
+{
+	Shape_Ctor(_adr);
+	*(FUNC**)_adr = g_CircleVT;
+	//*(void(***)(void))_adr = g_CircleVT;
+	TO_CIRCLE(_adr)->m_radius = 2;
+	printf("Circle::Ctor()%d\n", TO_CIRCLE(_adr)->m_shape.m_id);
+}
+
+void Circle_Dtor(Circle* _this) 
+{
+	printf("Circle::Dtor()%d\n", _this->m_shape.m_id);
+	Shape_Dtor((Shape*)_this);
+}
+
+void Circle_Draw_This(Circle* _this)
+{
+	printf("Circle::Draw()%d\n", _this->m_shape.m_id);
+}
+
+void Circle_Radius_This(Circle* _this)
+{
+	printf("Circle::Radius()%d\n", _this->m_shape.m_id);
+}
+
+void Circle_CopyCtor(void* _adr, Circle* _other)
+{
+	Shape_CopyCtor(_adr, (Shape*)_other);
+	*(void(***)(void))_adr = g_CircleVT;
+	TO_CIRCLE(_adr)->m_radius = _other->m_shape.m_id;
+	printf("Circle::CCtor()%d\n", TO_CIRCLE(_adr)->m_shape.m_id);
+}
+
+
+/*------------------------------------------------------------------*/
+
+typedef struct Square{
+	Shape m_shape;
+}Square;
+
+/*------------------------------------------------------------------*/
+
+void Square_Ctor(void* _adr);
+void Square_Dtor(Square* _this); 
+void Square_CopyCtor(void* _adr, Square* _other);
+void Square_Draw_This(Square* _this);
+
+/*------------------------------------------------------------------*/
+
+/* Square VT */
+FUNC g_SquareVT[]  = { (FUNC)Square_Dtor , (FUNC)Square_Draw_This };
+
+//void (*g_SquareVT[]) (void)  = { (FUNC)Square_Dtor , (FUNC)Square_Draw_This };
+
+/*------------------------------------------------------------------*/
+
+void Square_Ctor(void* _adr)
+{
+	Shape_Ctor(_adr);
+	*(FUNC**)_adr = g_SquareVT;	
+	//*(void(***)(void))_adr = g_SquareVT;
+	printf("Square::Ctor()%d\n", TO_SQUARE(_adr)->m_shape.m_id);
+}
+
+void Square_Dtor(Square* _this) 
+{
+	printf("Square::Dtor()%d\n", _this->m_shape.m_id);
+	Shape_Dtor((Shape*)_this);
+}
+
+void Square_CopyCtor(void* _adr, Square* _other)
+{
+	Shape_CopyCtor(_adr, (Shape*)_other);
+	*(void(***)(void))_adr = g_SquareVT;
+	printf("Square::CCtor()%d\n", TO_SQUARE(_adr)->m_shape.m_id);
+}
+
+void Square_Draw_This(Square* _this)
+{
+	printf("Square::Draw()%d\n", _this->m_shape.m_id);
+}
+
+/*------------------------------------------------------------------*/
+/*
+void f1(Shape &s) { s.Draw(); }
+
+void f2() { Shape::PrintNShapes(); }
+
+void f3(Circle c) { c.Draw(); }
+*/
+
+void f3(Circle* _c)
+{ 
+	Circle c;
+	Circle_CopyCtor(&c, _c);
+
+	Circle_Draw_This(&c); 
+
+	Circle_Dtor(&c);
+}
+/*------------------------------------------------------------------*/
+
+Shape TmpCirc(Circle* _c, Shape* _cTmp)
+{ 
+	Circle_Ctor(_c);
+
+	Shape_CopyCtor(_cTmp, (Shape*)_c);
+
+	Circle_Dtor(_c);
+
+	return *_cTmp;
+}
+
+Shape TmpSqur(Square* _sq, Shape* _sqTmp)
+{ 
+	Square_Ctor(_sq);
+
+	Shape_CopyCtor(_sqTmp, (Shape*)_sq);
+
+	Square_Dtor(_sq);
+
+	return *_sqTmp;
+}
+
+Shape TmpShape(Shape* _shpTmp)
+{ 
+	Shape_Ctor(_shpTmp);
+
+	return *_shpTmp;
+}
+
+/*------------------------------------------------------------------*/
+int main(int argc, char **argv, char **envp)
+{
+	
+    //Circle c;
+	Circle c;
+	Circle_Ctor(&c);
+
+	/*--------------------------------------*/
+
+	//f3(c);
+    f3(&c);
+
+	/*--------------------------------------*/
+
+    //Shape *array[] = { new Circle(),  new Square(),  new Circle()  };
+	Circle* circle1 = malloc (sizeof(Circle) );
+	Circle_Ctor(circle1);
+
+	Square* square1 = malloc (sizeof(Square) );
+	Square_Ctor(square1);
+
+	Circle* circle2 = malloc (sizeof(Circle) );
+	Circle_Ctor(circle2);
+
+	Shape* array[] = { (Shape*)circle1,  (Shape*)square1 ,  (Shape*)circle2  };
+
+	/*--------------------------------------*/	
+
+//  for(int i = 0; i < 3; ++i){
+//    	 array[i]->Draw();
+//	}
+
+	int i;
+	for(i = 0; i < 3; ++i){
+		/*draw*/
+		FUNC virFunc = (*(FUNC**)(array[i]))[1]; 
+		((void(*)(Shape*)) virFunc) (array[i])  ;
+	}
+
+	/*--------------------------------------*/
+
+ //   for(int i = 0; i < 3; ++i){ 
+ //  	delete array[i];
+ //   }
+
+	for(i = 0; i < 3; ++i){ 
+		/*execute dtor*/
+    	FUNC dtor = (*(FUNC**)(array[i]))[0]; 
+		((void(*)(Shape*)) dtor) (array[i])  ;
+	
+		/*free mem*/ 
+		free (array[i]);
+    }
+
+	/*--------------------------------------*/
+
+  // Shape arr2[] = { Circle(),  Square(),  Shape()  };
+
+
+	Circle circ;
+	Square squr;
+
+	Shape tmpCirc, tmpSqur, tmpShp;
+	
+	/*slicing!!!*/
+	Shape arr2[] = { TmpCirc(&circ, &tmpCirc) , TmpSqur(&squr, &tmpSqur) , TmpShape(&tmpShp) };
+
+	/*--------------------------------------*/
+	
+  //  for(int i = 0; i < 3; ++i){
+  //  	arr2[i].Draw();
+  //	}
+
+	for(i = 0; i < 3; ++i){
+		/*draw*/
+    	FUNC virFunc = (*(FUNC**)(&arr2[i]))[1]; 
+		((void(*)(Shape*)) virFunc) (&arr2[i])  ;
+  	}
+
+	/*--------------------------------------*/
+
+  //  Shape::PrintNShapes();
+
+	PrintNShapes();
+
+    //Circle c2;
+
+	Circle c2;
+	Circle_Ctor(&c2);
+
+    //c2.PrintNShapes();
+
+	PrintNShapes();
+
+	/*--------------------------------------*/
+
+    //Circle arr3[4];
+
+	Circle arr3[4];
+	for(i = 0; i < 4; ++i){
+    	Circle_Ctor(&arr3[i]);
+  	}
+
+	/*--------------------------------------*/
+
+    //Square *arr4 = new Square[4];
+	Square* arr4 = malloc (sizeof(Square) * 4 );
+	for(i = 0; i < 4; ++i){
+    	Square_Ctor(&arr4[i]);
+  	}
+
+    //delete [] arr4;
+
+	for(i = 3; i >= 0; --i){
+    	Square_Dtor(&arr4[i]);
+  	}
+
+	free(arr4);
+
+	/*--------------------------------------*/	
+
+	/*dtors of all local objects*/
+	for(i = 3; i >= 0; --i){
+    	Circle_Dtor(&arr3[i]);
+  	}
+
+	Circle_Dtor(&c2);
+  
+	Shape_Dtor(&tmpSqur);
+	Shape_Dtor(&tmpShp);
+	Shape_Dtor(&tmpCirc);  	
+
+	Circle_Dtor(&c);
+
+    return 0;
+} 
+
+/*------------------------------------------------------------------*/

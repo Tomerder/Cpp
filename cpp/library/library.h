@@ -1,0 +1,130 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      16.01.14
+    Date last modified : 16.01.14 
+    Description : Library 
+***************************************************************************************/
+#ifndef __LIBRARY_H__
+#define __LIBRARY_H__
+
+#include <map>
+#include <queue>
+#include <list>
+#include <string>
+#include <limits.h>
+using namespace std;
+
+#include "libraryBook.h"
+#include "borrower.h"
+
+/*------------------------------------------------------------------------------------*/	
+
+typedef struct BookCount{
+	unsigned int m_count;	
+	unsigned int m_countOut;	
+}BookCount;
+
+/*------------------------------------------------------------------------------------*/	
+
+typedef map < unsigned int, Borrower* >::iterator ItrBorrwer;
+typedef map < unsigned int, Borrower* >::const_iterator CItrBorrwer;
+
+typedef map < unsigned int, unsigned int >::iterator ItrId2CustNum;
+
+typedef map < unsigned int, LibraryBook* >::iterator ItrLibBook;
+typedef map < unsigned int, LibraryBook* >::const_iterator CItrLibBook;
+
+typedef multimap < unsigned int, unsigned int >::iterator ItrMMbook2LibBook;
+typedef multimap < string, unsigned int >::iterator ItrMMbookStr2LibBook;
+
+typedef map < unsigned int, BookCount* >::iterator ItrBookCount;
+
+typedef map < unsigned int, queue<Borrower*>* >::iterator ItrWaitingList;
+
+/*------------------------------------------------------------------------------------*/	
+
+class Library{ 
+
+private: 	
+	/*borrower maps*/
+	map < unsigned int, Borrower* > m_custMap;  /*custnum , Borrower*   */   /*1*/
+	map < unsigned int, unsigned int > m_custMapId2CustNum;  /*id , custnum*   */      /*2*/
+	
+	/*libraryBook maps*/
+	map < unsigned int, LibraryBook* > m_libBookMap;  /*callnum , LibraryBook*   */  /*3*/
+	multimap < unsigned int, unsigned int > m_book2LibBookMMap;  /*isbn , call nums */ /*5*/
+	multimap < string, unsigned int > m_bookTitle2LibBookMMap;  /*title , call nums */
+	multimap < string, unsigned int > m_bookAuthor2LibBookMMap;  /*author , call nums */ 	
+
+	/* BookCount :  isbn , BookCount*/
+	map < unsigned int, BookCount* > m_bookCountMap;   /*4*/
+	
+	/* waiting lists : isbn , queue<Borrower*>   */
+	map < unsigned int, queue<Borrower*>* > m_waitingLists;  /*6*/
+	
+	/*---------------------private methods----------------*/
+	/*bookCount*/
+	void IncLibBookCount(const LibraryBook* _book);
+	void DecLibBookCount(const LibraryBook* _book);
+	BookCount* GetBoookCountByIsbn(unsigned int _id);
+	
+	/*borrower*/
+	ItrBorrwer SearchBorrowerImp(unsigned int _custNum);
+	Borrower* GetBorrowerById(unsigned int _id);
+	Borrower* GetBorrowerByCustNum(unsigned int _custNum);
+	
+	/*lib book*/
+	ItrLibBook SearchLibBookImp(unsigned int _callNum);
+	LibraryBook* GetAvailableLibBook(unsigned int _isbn);
+	void RemoveLibBookFromMMisbn(LibraryBook* _libBook, unsigned int _callNum);	
+	void RemoveLibBookFromMMtitle(LibraryBook* _libBook, unsigned int _callNum);	
+	void RemoveLibBookFromMMauthor(LibraryBook* _libBook, unsigned int _callNum);	
+
+	/*waiting list*/
+	queue<Borrower*>* GetWaitingList(unsigned int _isbn);
+	/*wiil create queue for book if not already exists*/
+	void InsertBorrowerToWaitList(unsigned int _isbn, Borrower* borrower);
+	void NotifyBorrowerOnWaitList(unsigned int isbn);
+	/*---------------------not allowed----------------*/
+	Library(const Library& _lib);
+	Library& operator=(const Library& _lib);		
+
+protected:
+	map < unsigned int, Borrower* > getCustMap() {return m_custMap;}
+	map < unsigned int, LibraryBook* >  getLibBookMap() {return m_libBookMap;}	
+	map < unsigned int, BookCount* > getBookCountMap() {return m_bookCountMap;}	
+	multimap < unsigned int, unsigned int > getBook2LibBookMMap() {return m_book2LibBookMMap;}
+	map < unsigned int, queue<Borrower*>* >  getWaitingLists() {return m_waitingLists;}
+
+public: 	
+	Library() {}
+		
+	virtual ~Library();
+	
+	unsigned int AddBorrower(const Person& _person);  /*returns custNum , if failed 0 */
+	bool RemoveBorrower(unsigned int _custNum);
+	Borrower* SearchBorrowerById(unsigned int _id);
+	Borrower* SearchBorrowerByCustNum(unsigned int _custNum);
+	
+	unsigned int AddLibBook(const Book& _book);       /*returns callNumber , if failed 0 */
+	bool RemoveLibBook(unsigned int _callNum);
+	LibraryBook* SearchLibBookByCallNum(unsigned int _callNum);
+	/*result will be returned by second parameter _outputList , return value will be false if none found , true otherwise*/
+	bool SearchLibBooksByIsbn(unsigned int _isbn, list<LibraryBook*>& _outputList);
+	bool SearchLibBooksByTitle(string _title, list<LibraryBook*>& _outputList);
+	bool SearchLibBooksByAuthor(string _author, list<LibraryBook*>& _outputList);
+	
+	/*return call number of library book that has been borrowed , return 0 if failed , UINT_MAX if entered to waiting list
+	  borrowing the same book more then once is not allowed	*/
+	unsigned int BorrowBook(unsigned int _custId, unsigned int _isbn);
+	bool ReturnBook(unsigned int _custId, unsigned int _callNum);
+		
+	void PrintCusts(bool _withBooks = false) const;
+	void PrintLibBooks(bool _withOwner = false) const;
+	
+};
+
+/*------------------------------------------------------------------------------------*/		
+#endif /*__LIBRARY_H__*/
+
+

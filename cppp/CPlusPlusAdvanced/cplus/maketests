@@ -1,0 +1,52 @@
+# the test makefile should include the definitions:
+#OBJS: object file names from the test directory
+#DIRS: list of directories to visit
+#LIBS: names of relevant library archives
+#INCDIR: directories to include
+#EXEFILE: name of executable
+#CFLAGS2: additional compilation flags
+#LFLAGS2: additional linkage flags
+
+CXX=g++
+INCDIR=../../Ainclude
+CXXFLAGS=-g -ansi -pedantic -Wall -Werror -I $(INCDIR) $(CFLAGS2)
+LFLAGS=-g $(LFLAGS2)
+
+# dependencies & rule for executable: link object files
+$(EXEFILE): $(OBJS) $(LIBS) $(DIRS)
+	for dir in $(DIRS); do \
+		$(MAKE) -C $$dir; \
+	done
+	$(CXX) $(LFLAGS) $(OBJS) $(LIBS) -o $@ $(LFLAGS2)
+
+
+# include list of depedencies, create if doesn't exist
+# if dependencies changed, need to manually delete "depends"
+include depends
+
+depends:
+	$(CXX) -I $(INCDIR) -MM $(OBJS:.o=.cpp) > depends
+
+
+.PHONEY: clean
+clean:
+	rm depends $(OBJS) $(EXEFILE)
+
+# clean the other directories
+.PHONEY: cleandirs
+cleandirs:
+	for dir in $(DIRS); do \
+	$(MAKE) clean -C $$dir; \
+	done
+
+# remove intemediate files
+.PHONEY: cleanme
+cleanme:
+	rm depends $(OBJS)
+
+# clean all, leave only executable
+.PHONEY: cleanall
+cleanall:
+	$(MAKE) cleanme
+	$(MAKE) cleandirs
+

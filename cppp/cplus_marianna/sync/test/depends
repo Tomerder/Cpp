@@ -1,0 +1,1 @@
+main.o: main.cpp ../../Ainclude/sync.h ../../Ainclude/uncopyable.h

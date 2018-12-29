@@ -1,0 +1,118 @@
+#include <iostream>
+#include <string.h>
+
+#include "container.h"
+#include "vector.h"
+#include "list.h"
+
+using namespace std;
+
+
+void interactiveMain();
+
+void remove(Container_t<int>* _container);
+void find(Container_t<int>* _container);
+
+/*------------------------------------------------------------------------------------*/
+int main() 
+{
+	
+	interactiveMain();
+		
+	return 0;
+}
+/*------------------------------------------------------------------------------------*/
+
+void interactiveMain()
+{
+	int insert = 1;	
+	char ch;
+	Container_t<int>* container = NULL;	
+	
+	cout << "/-----------------------------------------------------/" << endl;	
+	cout << "Press 'v' to test vector , any other key to test list : ";
+	cin >> ch;
+
+	if(ch == 'v'){
+		container = new Vector_t<int>();
+	}else{
+		container = new List_t<int>();
+	}
+	
+
+	int cont = 1;
+	
+	while(cont) {
+		cout << endl;
+		cout << "1 - insert int to end" 	<< endl;
+		cout << "2 - append index 1" 	<< endl;
+		cout << "3 - prepend index 1" 	<< endl;
+		cout << "4 - remove index 1" 	<< endl;
+		cout << "5 - find value 5" 	<< endl;	
+		cout << "6 - get num of items" 	<< endl;
+		cout << "7 - save to file" 	<< endl;
+		cout << "8 - get from file" 	<< endl;	
+		cout << "9 - print" 	<< endl;			
+		cout << "Please, choose option: ";
+	
+		cin >> ch;
+		
+		switch(ch) {
+			case '1' : container->Insert(insert++); container->Print(); break;		
+			case '2' : container->Append(1,insert++); container->Print(); break;	
+			case '3' : container->Prepend(1,insert++); container->Print(); break;		
+			case '4' : remove(container) ; break;
+			case '5' : find(container); break;
+			case '6' : cout << "Num of items: " <<container->getNumOfItems() << endl ; break;
+			case '7' : container->SaveToFile("tmp.txt") ; break;
+			case '8' : container->GetFromFile("tmp.txt"); break;
+			case '9' : container->Print(); break;
+			
+					
+			default: cont = 0;
+		}
+	}
+
+	delete container;
+
+	cout << "/-----------------------------------------------------/" << endl;
+
+}
+
+
+
+/*------------------------------------------------------------------------------------*/
+
+
+void remove(Container_t<int>* _container)
+{
+	try{
+		int getInt = _container->Remove(1);
+		cout << getInt << " removed." << endl;
+	}catch(int& exp){
+		cout << "exeption!!!" <<endl;
+	}
+	
+	_container->Print();
+}
+
+/*------------------------------------------------------------------------------------*/
+
+
+void find(Container_t<int>* _container)
+{
+	int itemFound = 0;
+	bool res = _container->Find(5, &itemFound);
+	if(res)	{
+		cout <<  "item found: " << itemFound  << endl;
+	}else{
+		cout <<  "wasnt found"  << endl;
+	}
+	//_container->Print();
+}
+
+
+/*------------------------------------------------------------------------------------*/
+
+
+

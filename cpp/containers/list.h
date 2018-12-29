@@ -1,0 +1,330 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      6.1.13
+    Date last modified : 6.1.13
+    Description : container
+***************************************************************************************/
+#ifndef __LIST_H__
+#define __LIST_H__
+
+#include "container.h"
+
+using namespace std;
+
+
+template<class ITEM>
+class List_t : public Container_t<ITEM> { 
+
+private: 	
+	typedef struct Node{
+		ITEM s_data;
+		Node* s_next;
+		Node* s_prev;
+	}Node;
+
+	Node* m_head;
+	Node* m_tail;
+	
+	/*private methods*/
+	void copyList(const List_t& _list) ;	
+	void deleteList() ;
+	
+	void InsertImp(const ITEM& _dataToInsert, Node* _prevNode,  Node* _nextNode);
+	
+public: 	
+	List_t() ;
+
+	List_t(const List_t& _list) ;
+	List_t& operator=(const List_t& _list);
+
+	virtual ~List_t() ;
+	/*-------------------------------------------------*/
+	/* pure virtual methods implementation */		
+	virtual bool Append(int _index, const ITEM& _item);
+	virtual bool Prepend(int _index, const ITEM& _item);
+	virtual bool Insert(const ITEM& _item);  //to end of container
+	virtual ITEM Remove(int _index);
+	virtual void RemoveAll();
+
+	virtual bool Find(const ITEM& _itemToFind, ITEM* _foundItem, typename Container_t<ITEM>::CompFunc _CompFunc = DefaultCompFunc ) ;
+		
+	virtual void Print(typename Container_t<ITEM>::PrintFunc _PrintFunc = DefaultPrintFunc) const;
+
+	virtual bool SaveToFile(const string& _fileName) const;
+
+	virtual int	ForEach	(typename Container_t<ITEM>::DoFunc _DoFunc, void* _params);
+	/*-------------------------------------------------*/
+};
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+List_t<ITEM>::List_t() 
+{
+	m_head = new Node;
+	m_head->s_data = 0;
+	
+	m_tail= new Node;
+	m_tail->s_data = 0;
+	
+	m_head->s_next = m_tail;
+	m_tail->s_prev = m_head;
+	
+	m_head->s_prev = NULL;
+	m_tail->s_next = NULL;		
+}  		
+
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+List_t<ITEM>::List_t(const List_t& _list)  
+{  	
+	copyList(_list);
+} 
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+List_t<ITEM>& List_t<ITEM>::operator=(const List_t& _list)
+{
+	if(this != &_list ){
+		deleteList();
+		copyList(_list);
+	}
+	return *this;
+}	
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+List_t<ITEM>::~List_t() 
+{ 
+	deleteList();
+	
+	delete m_head;
+	delete m_tail;		
+	m_head = 0;
+	m_tail = 0;
+}	
+
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+void List_t<ITEM>::InsertImp(const ITEM& _dataToInsert, Node* _prevNode,  Node* _nextNode)
+{
+	Node* newNode = new Node;
+	newNode->s_data = _dataToInsert;
+	
+	newNode->s_prev = _prevNode;
+	newNode->s_next = _nextNode;
+	
+	_prevNode->s_next = newNode; 
+	_nextNode->s_prev  = newNode;
+
+	this->incNumOfItems();
+}
+/*--------------------------------------------------------------------------------*/
+template<class ITEM>
+bool List_t<ITEM>::Append(int _index, const ITEM& _item)
+{
+	int numOfItems = this->getNumOfItems();
+	
+	if(_index >= numOfItems || _index < 0 ){
+		return false;
+	}
+	
+	Node* node = m_head;
+	for(int i=0 ; i <= _index ; i++){
+		node = node->s_next;
+	}
+	
+	InsertImp(_item, node, node->s_next);
+	
+	return true;	
+}
+
+
+template<class ITEM>
+bool List_t<ITEM>::Prepend(int _index, const ITEM& _item)
+{
+	int numOfItems = this->getNumOfItems();
+	
+	if(_index > numOfItems || _index < 0){
+		return false;
+	}
+	
+	Node* node = m_head;
+	for(int i=0 ; i < _index ; i++){
+		node = node->s_next;
+	}
+	
+	InsertImp(_item, node, node->s_next);
+	
+	return true;	
+}
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+bool List_t<ITEM>::Insert(const ITEM& _item)  //to end of container
+{
+	InsertImp(_item, m_tail->s_prev, m_tail);
+
+	return true;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>	
+ITEM List_t<ITEM>::Remove(int _index)
+{
+	int numOfItems = this->getNumOfItems();
+	
+	if(_index >= numOfItems || _index < 0){
+		throw TExeption_t<int>(__FILE__, __LINE__, _index , "index error!!!");    //throw exeption
+	}
+	
+	ITEM item;
+	Node* node = m_head;
+	for(int i=0 ; i <= _index ; i++){
+		node = node->s_next;
+	} 
+	
+	item = node->s_data;
+	node->s_prev->s_next = node->s_next;
+	node->s_next->s_prev = node->s_prev;
+	delete node;
+	
+	this->decNumOfItems();
+	
+	return item;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>		
+void List_t<ITEM>::RemoveAll()
+{
+	 deleteList();
+}
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+bool List_t<ITEM>::Find(const ITEM& _itemToFind,  ITEM* _foundItem , typename Container_t<ITEM>::CompFunc _CompFunc) 
+{
+	int numOfItems = this->getNumOfItems();
+	Node* node = m_head;
+	
+	for(int i = 0 ; i < numOfItems ; i++){
+		node = node->s_next;
+		if( _CompFunc( node->s_data , _itemToFind) ){
+			*_foundItem = node->s_data;
+			return true; 
+		}
+	}
+	
+	return false; 
+}
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+void List_t<ITEM>::Print(typename Container_t<ITEM>::PrintFunc _PrintFunc) const
+{
+	int numOfItems = this->getNumOfItems();
+	Node* node = m_head;
+	
+	for(int i = 0 ; i < numOfItems ; i++){
+		node = node->s_next;
+		_PrintFunc(node->s_data);
+		cout << " , ";
+	}
+	cout << endl;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+int List_t<ITEM>::ForEach(typename Container_t<ITEM>::DoFunc _DoFunc, void* _params)
+{
+	int good=0;
+	int numOfItems = this->getNumOfItems();
+	Node* node = m_head;
+	
+	for(int i = 0 ; i < numOfItems ; i++){
+		node = node->s_next;
+		if(_DoFunc(node->s_data ,_params)){
+			good++;		
+		}
+	}
+	return good;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+void List_t<ITEM>::deleteList()
+{
+	int numOfItems = this->getNumOfItems();
+	Node* node = m_head;
+	Node* savNext = node->s_next;
+	
+	for(int i = 0 ; i < numOfItems ; i++){
+		node = savNext;
+		savNext = node->s_next;
+		delete node;	
+	}
+
+	this->setNumOfItems(0);
+}
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+void List_t<ITEM>::copyList(const List_t& _list)
+{
+	int numOfItems = _list->getNumOfItems();
+	Node* node = _list->m_head;
+	
+	for(int i = 0 ; i < numOfItems ; i++){
+		node = node->s_next;
+		Insert(node->s_data);
+	}
+
+	this->setNumOfItems(numOfItems);
+}
+
+
+/*--------------------------------------------------------------------------------*/
+
+template<class ITEM>
+bool List_t<ITEM>::SaveToFile(const string&  _fileName) const 
+{
+	ofstream file;
+  	file.open (_fileName.c_str() );	
+	if(!file.is_open()){
+		return false;
+	}
+	
+	Node* node = m_head;
+	int numOfItems = this->getNumOfItems();
+
+	for(int i = 0 ; i < numOfItems ; i++){
+		node = node->s_next;
+		file.write((char*)(&(node->s_data)), sizeof(ITEM));
+	}
+	
+	file.close();
+
+	return true;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+#endif /*__LIST_H__*/
+
+

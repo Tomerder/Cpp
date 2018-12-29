@@ -1,0 +1,35 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      28.12.13
+    Date last modified : 28.12.13
+    Description : student.h 
+***************************************************************************************/
+#ifndef __CHICKEN_H__
+#define __CHICKEN_H__
+
+#include "animal.h"
+
+
+class Chicken : public Animal {
+
+private: 
+	static int m_numOfChickens;	
+	
+	Chicken();    //private Ctor
+	Chicken(const char* _name, int _id);   //private Ctor
+	Chicken(const Chicken& _chickenToCpy);   //private Copy Ctor
+	
+public: 	
+	~Chicken();
+	
+	static Chicken* createInstance(const char* _name);  //method of creating object
+	
+	void Show() const;
+	void MakeSound() const;	
+};
+
+
+	
+#endif /*__CHICKEN_H__*/
+
+

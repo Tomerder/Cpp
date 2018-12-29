@@ -1,0 +1,106 @@
+/************************************************************************
+BitSet class. h file.
+Author: Dan Bar-On.
+Creation Date: 30.3.14 
+Modified at:
+Description:
+************************************************************************/
+#ifndef __BITSET_H__
+#define __BITSET_H__
+
+#include <stdlib.h>
+#include <iostream> 
+#include <climits> 
+
+//#include "BitProxy.h"
+
+using namespace std;
+namespace m10{
+
+template <size_t N>
+class BitSet {
+class BitProxy;
+public:
+	BitSet();	//initialize(make zero)
+	//~BitSet();
+	
+	bool GetBit(size_t);
+	void SetBit(size_t _index, bool _val);
+	
+	bool operator[] (size_t _index) const;	//GetBit
+	BitProxy operator[] (size_t _index);	//SetBit
+	
+	BitSet& operator|= (const BitSet& _rhs);
+	BitSet& operator&= (const BitSet& _rhs);
+	BitSet& operator^= (const BitSet& _rhs);
+	BitSet& operator<<= (size_t _moves);
+	BitSet& operator>>= (size_t _moves);
+
+	BitSet& operator~ ();
+
+	BitSet operator<< ( size_t _moves);
+	BitSet operator>> ( size_t _moves);
+	
+	size_t CountOn();
+
+//	friend ostream& operator<< (ostream& _out, const BitSet& _cr);
+private:
+	size_t m_data[ N / sizeof(size_t) / CHAR_BIT ];
+
+	class BitProxy {
+	public:
+		BitProxy(BitSet* _bitSet, size_t _index):m_bitSet(_bitSet), m_index(_index){};	//make private?
+
+		operator bool(){ return m_bitSet->GetBit(m_index);}
+		BitProxy& operator=(bool _val){m_bitSet->SetBit(m_index, _val); return *this;}
+		BitProxy& operator=(const BitProxy& _bp){m_bitSet->SetBit(m_index, (_bp.m_bitSet)->GetBit(m_index) );}
+
+	private:
+		BitSet<N>* m_bitSet;
+		size_t m_index;
+
+		BitProxy (const BitProxy& _bp);
+	};
+
+};
+
+template <size_t N>
+BitSet<N> operator| (const BitSet<N>& _lhs, const BitSet<N>& _rhs);
+template <size_t N>
+BitSet<N> operator& (const BitSet<N>& _lhs, const BitSet<N>& _rhs);
+template <size_t N>
+BitSet<N> operator^ (const BitSet<N>& _lhs, const BitSet<N>& _rhs);
+
+//-------------------------------------------------------------------------------
+template <size_t N>
+BitSet<N>::BitSet()
+{
+	memset(&m_data, 0, N/CHAR_BIT);
+}
+//-------------------------------------------------------------------------------
+bool GetBit(size_t _index)
+{
+	return *this[_index];
+}
+//-------------------------------------------------------------------------------
+void SetBit(size_t _index, bool _val)
+{
+	*this[_index] = _val;
+}
+//-------------------------------------------------------------------------------
+
+
+//Street_t<T2,T1>* City_t<T3,T2,T1>::GetStreet(T2 _id)
+
+
+
+
+
+
+
+
+
+
+} // end of namespace m10
+#endif	// #ifndef __BITSET_H__
+

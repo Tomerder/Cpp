@@ -1,0 +1,66 @@
+
+# General system configuration
+
+#0=OAM , 1=CONTROL , 2=EMULATION , 3=TESTER
+MY_ID 2
+
+#0=PROD / 1=TEST
+SYSTEM_MODE 1
+
+
+
+# Communocation configuration
+
+IP_OAM 192.168.1.111
+IP_CONTROL 127.0.0.1
+IP_EMULATION 192.168.1.54
+IP_TEST 127.0.0.1
+
+PORT_OAM 6000
+PORT_CONTROL 7000
+PORT_EMULATION 8000 
+PORT_TEST 9000
+
+
+# World Emulation log Configuration
+
+# modes: combaine diffrent mode as u like 
+#	DEBUG    = 0x1,
+#	CRITICAL = 0x2,
+#	NORMAL   = 0x4,
+#	SYSTEM   = 0x8,
+ 	
+#	NO_TIME  = 0x10,
+#	JUST_MSG = 0x20
+
+LOG_MODE 15
+LOG_FILE_NAME world_emu_log.txt
+
+# 1=send / 0=not-send  , to OAL
+LOG_REMOTE 1 
+
+
+
+# World Emulation Events Configuration
+
+CAR_SENSOR_NORTH 2
+CAR_SENSOR_SOUTH 3
+CAR_SENSOR_EAST 3
+CAR_SENSOR_WEST 4
+				
+PD_SENSOR_NORTH 5
+PD_SENSOR_SOUTH 6
+PD_SENSOR_EAST 6
+PD_SENSOR_WEST 6
+
+ORANGE_MODE 25
+					   
+POLICE_CROSS_STATUS 15
+					   
+NORTH_SOUTH_STRAIGHT_AND_RIGHT 2
+EAST_WEST_STRAIGHT_AND_RIGHT 3
+NORTH_SOUTH_LEFT 3
+EAST_WEST_LEFT 4
+
+POLICE_ORANGE 7
+

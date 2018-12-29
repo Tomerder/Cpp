@@ -1,0 +1,59 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      19.1.14
+    Date last modified : 19.1.14
+    Description : Parser
+***************************************************************************************/
+#ifndef __TOCKENAIZER_H__
+#define __TOCKENAIZER_H__
+
+#include <string>
+#include <set>
+#include <deque>
+
+using namespace std;
+
+/*--------------------------------------------------------------------------------*/
+
+class Tockenaizer{   
+
+private: 		
+	/*set<char> m_delimiters;*/
+	string m_delimiters;	
+		
+	string m_lineToTockenize;
+	deque<string> m_tockensCreated;
+	
+	
+	/*will never be use*/
+	Tockenaizer(const Tockenaizer& _tock);	
+	Tockenaizer& operator=(const Tockenaizer& _tock);
+	
+public: 
+	Tockenaizer() {} 	
+		
+	virtual ~Tockenaizer() {}	
+	
+	const string& GetDelimiters() const {return m_delimiters;}
+	/*
+	void AddDelimiter(char _delimiter) { m_delimiters.insert(_delimiter); } 
+	void AddDelimiters(string _delimiters) ;
+	*/
+	void SetDelimiters(string _delimiters) {m_delimiters = _delimiters;}
+	
+	void ClearDelimiters() { m_delimiters.clear(); } 
+	
+	void SetLineToTockenize(string _line) { m_lineToTockenize = _line; } 
+	
+	const deque<string>& GetTockens() const { return m_tockensCreated; } 
+	
+	/*will set _tockensCreated with tockens from line.  returns number of tockens*/
+	size_t CreateTockens();
+
+};
+
+/*--------------------------------------------------------------------------------*/
+	
+#endif /*__TOCKENAIZER_H__*/
+
+

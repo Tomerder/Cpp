@@ -1,0 +1,19 @@
+#ifndef __AAA_
+#define __AAA_
+
+#include <iostream>
+
+using namespace std;
+
+template<class T>
+T foo(T a)
+{
+	cout << "template func address is : " << unsigned(foo<T>) << endl; 
+
+	return a;
+}
+
+int lab1(void);
+int lab2(void);
+
+#endif

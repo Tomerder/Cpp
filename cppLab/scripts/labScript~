@@ -1,0 +1,11 @@
+lib=~/cpp/test/lab
+
+#create from template
+cp $lib/template.cpp $lib/$1.cpp
+gedit $lib/$1.cpp
+
+#build and nm object and product
+nmcpp $lib/$1
+
+#execute
+$lib/$1

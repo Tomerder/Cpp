@@ -1,0 +1,45 @@
+LIB_NAME := traffic
+
+
+HEADER_PATH += ../Ainclude
+LIB_PATH := ../Alib
+BIN_PATH := ../Abin
+TEST_PATH:=./test
+
+OBJ_FOLDER:= ./obj
+
+SHARED_LIB_NAME := lib$(LIB_NAME).so
+
+TEST_FILE:=test_$(PROJECT).cpp
+
+CC:= g++
+CPPFLAGS:= -g -ansi -pedantic -Wall -Werror -I$(HEADER_PATH) -fPIC -DUNIX
+LDFLAGS:= -L$(LIB_PATH) -l$(LIB_NAME) -lrt  -lncurses  -lCppUTest
+
+vpath %.h $(HEADER_PATH)
+vpath %.o $(OBJ_FOLDER)
+vpath %.a $(LIB_PATH)
+
+
+.PHONY: all clean commit
+
+
+test: objs
+	$(CC) -Wl,-rpath,$(LIB_PATH) $(CPPFLAGS) $(TEST_PATH)/$(TEST_FILE) -o run_test_$(PROJECT) $(LDFLAGS) 
+#TODO: add dependency on the .h file?
+objs: $(OBJS) 
+	-mkdir -p obj
+	-mv $(OBJS) $(OBJ_FOLDER)
+	
+
+clean:
+	-rm run_test_$(PROJECT)
+	-rm -r $(OBJ_FOLDER) 
+
+commit: objs
+	$(AR) rv $(LIB_PATH)/lib$(LIB_NAME).a $(OBJ_FOLDER)/$(PROJECT).o
+
+present:
+	tree -L 2 | less
+
+

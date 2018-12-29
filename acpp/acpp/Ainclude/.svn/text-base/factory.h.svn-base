@@ -1,0 +1,94 @@
+#ifndef FACTORY_H
+#define FACTORY_H
+
+#include <tr1/memory>	//shared_ptr
+#include <iostream>
+#include <sstream>
+#include <map>
+#include <typeinfo>
+
+template <class T>
+class Factory
+{
+public:
+typedef std::tr1::shared_ptr<T> SharedT;
+	
+	SharedT Create(std::istream&);
+	
+	void Serialize(const T&, std::ostream&);
+	
+	template <class DERIVED>
+	void Add();
+
+private:
+	template <class DERIVED>
+	static SharedT Creator(std::istream& _name);
+	
+	std::map<const std::string, SharedT (*)(std::istream&) > m_map;
+};
+
+template <class T>
+typename Factory<T>::SharedT Factory<T>::Create(std::istream& _is)
+{
+	int num = 0;
+	_is >> num;
+	char buffer[64];
+	_is.read(buffer, num);
+
+	typename std::map<const std::string, SharedT (*)(std::istream&) >::iterator it;
+	it = m_map.find(buffer );
+
+	if (it == m_map.end() )
+	{
+		throw "didn't find this type";	
+	}
+	
+
+	_is >> num;
+	char* buff = new char[num];
+	_is.read(buff, num);
+
+	std::stringstream payload;
+	payload.write(buff , num);
+	
+	delete buff;
+	return it->second(payload);
+}
+
+template <class T>
+void Factory<T>::Serialize(const T& _object, std::ostream& _os)
+{
+	std::string 		str;	//to measure size
+	std::stringstream	stream;	//
+	
+	// put size of typename and typename into the ostream
+	str = typeid(T).name();	
+	_os << str.size();
+	_os << str;
+
+	// put size of serialize and serialize into the ostream
+	_object.Serialize(stream);
+	str = stream;
+	
+	_os << str.size();
+	_os << str;
+}
+
+template <class T>
+template <class DERIVED>
+void Factory<T>::Add()
+{
+	m_map.insert(typeid(DERIVED).name(), &Factory::Creator<DERIVED> );
+}
+
+template <class T>
+template <class DERIVED>
+typename Factory<T>::SharedT Factory<T>::Creator(std::istream& _str)
+{
+	return SharedT (new DERIVED(_str));
+}
+
+
+#endif	//#ifndef FACTORY_H
+
+

@@ -1,0 +1,80 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      16.01.14
+    Date last modified : 16.01.14 
+    Description : Library 
+***************************************************************************************/
+#ifndef __BORROWER_H__
+#define __BORROWER_H__
+
+#include <map>
+
+using namespace std;
+
+#include "person.h"
+#include "libraryBook.h"
+
+/*------------------------------------------------------------------------------------*/	
+
+typedef map< unsigned int , LibraryBook*>::const_iterator CItrBooks;
+
+/*------------------------------------------------------------------------------------*/	
+
+class Borrower : public Person{ 
+
+private: 	
+	const unsigned int m_custNum;
+	static unsigned int m_count;
+	
+	/* map: isbn , lBook*  */
+	map< unsigned int , LibraryBook*> m_mapOfBorrowedBooks;
+	/*map< unsigned int , LibraryBook*> m_mapOfBooksWaitedFor;*/
+	
+	/*not allowed*/
+	Borrower(const Borrower& _borrower);
+	Borrower& operator=(const Borrower& _borrower);	
+
+public: 	
+	Borrower(const Person& _person) :  Person(_person) ,  m_custNum(m_count++) {}
+		
+	virtual ~Borrower() { /*--m_count;*/ }	
+	
+	unsigned int getCustNum() const {return m_custNum;}
+	static unsigned int getCount()  {return m_count;}
+	
+	map< unsigned int , LibraryBook*> getMapOfBorrowedBooks() {return m_mapOfBorrowedBooks;}
+	/*map< unsigned int , LibraryBook*> getMapOfBooksWaitedFor() {return m_mapOfBooksWaitedFor;}*/
+	
+	void InsertBookToMap(unsigned int _isbn, LibraryBook* _libBook);
+	void EraseBookFromMap(unsigned int _isbn);
+	const LibraryBook* getLibBookFromMap(unsigned int _isbn) const;
+
+	virtual void Print() const {Person::Print(); cout << "BORROWER- custNum: " <<  m_custNum << endl ;} 
+
+	void PrintWithBooksTaken() const ;
+
+	void NotifyBookAvailable(unsigned int _isbn) { cout << "cust " << m_custNum << " : " << getName() << 
+													" has been notified that book : " << _isbn << " is now available !!!!!" << endl; }
+};
+	
+/*------------------------------------------------------------------------------------*/	
+	
+#endif /*__BORROWER_H__*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+ccode_main.o: ccode_main.c ccode.h
+ccode.o: ccode.c ccode.h

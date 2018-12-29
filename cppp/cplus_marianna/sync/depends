@@ -1,0 +1,2 @@
+sync.o: sync.cpp ../Ainclude/sync.h ../Ainclude/uncopyable.h \
+ ../Ainclude/timespecExtension.h

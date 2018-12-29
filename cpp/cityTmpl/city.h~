@@ -1,0 +1,75 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      5.1.13
+    Date last modified : 5.1.13 - 5.1.13
+    Description : city
+***************************************************************************************/
+#ifndef __CITY_H__
+#define __CITY_H__
+
+#include <vector>
+
+#include "street.h"
+
+using namespace std;
+
+
+template<class ID, class ID_STREET, class ID_BLD>
+
+class City_t{ 
+
+private: 	
+	ID m_id;
+	
+	vector< Street_t<ID_STREET, ID_BLD>*  >  m_streets; 
+		
+public: 
+	
+	City_t()  {};  	
+	City_t(const ID& _id)  {m_id = _id;} 	
+	
+	
+	City_t(const City_t& _city)
+	{ 
+		m_id = _city.m_id; 
+		copy(_city.m_streets.begin() , _city.m_streets.end() , back_inserter(m_streets) ) ;
+	}	
+	
+	City_t& operator=(const City_t& _city)
+	{
+		if(this != &_city ){
+			m_id = _city.m_id;
+			m_streets.clear();
+			copy(_city.m_streets.begin() , _city.m_streets.end() , back_inserter(m_streets) ) ;//m_streets = _city.m_streets;
+		}
+		return *this;
+	}
+		
+	virtual ~City_t() {}	
+	
+	const ID& getId() const {return m_id;}
+	void setId(const ID& _id) { m_id = _id; }
+	
+	void addStreet2City(Street_t<ID_STREET , ID_BLD>* _street){
+		m_streets.push_back(_street);
+	}
+	
+	const Street_t<ID_STREET, ID_BLD>* getStreet (const ID_STREET& _streetId) 
+	{
+		 typename vector<  Street_t<ID_STREET, ID_BLD>*  >::iterator it;
+		 for (it = m_streets.begin() ; it != m_streets.end(); ++it){
+		 	if( (*it)->getId() ==  _streetId){
+		 		return *it;
+		 	}
+		 }
+		 return NULL;	
+	}
+	
+
+};
+
+
+	
+#endif /*__CITY_H__*/
+
+

@@ -1,0 +1,152 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      15.1.14
+    Date last modified : 15.1.14 - 15.1.14
+    Description : template container - STL 
+***************************************************************************************/
+#include <iostream>
+#include <string.h>
+
+#include "cont.h"
+
+#define NUM_OF_ITEMS 5
+
+#define _LIST_ 0
+
+using namespace std;
+/*------------------------------------------------------------------------------------*/
+
+void Test();
+
+
+/*------------------------------------------------------------------------------------*/
+int main() 
+{
+	
+	Test();	
+	
+	return 0;
+}
+/*------------------------------------------------------------------------------------*/
+
+void Test()
+{
+	int arrOfInts[NUM_OF_ITEMS] = {10,20,30,40,50};
+	int* findRes=0;
+	
+	#if _LIST_
+		#if _TYPE2_
+			TContainer_t<int, list<int*> >  cont;
+		#else
+			TContainer_t<int, list >  cont;
+		#endif
+		cout << "/----------------------TEST LIST----------------------/" << endl;
+	#else
+		#if _TYPE2_
+			TContainer_t<int, vector<int*> >  cont;
+		#else
+			TContainer_t<int, vector >  cont;
+		#endif
+		cout << "/---------------------TEST VECTOR---------------------/" << endl;
+	#endif
+
+	
+	cout << "/-----------------------------------------------------/" << endl;
+	cout << "is empty : " << cont.IsEmpty() << endl;
+	cout << "num of elements : " << cont.GetNumOfElements() << endl;
+	cout << "/-----------------------------------------------------/" << endl;
+		
+	cont.Insert(&arrOfInts[0]);
+	cout << arrOfInts[0] << " inserted " << endl;	
+	cont.Insert(&arrOfInts[1]);
+	cout << arrOfInts[1] << " inserted " << endl;	
+	
+	cout << "is empty : " << cont.IsEmpty() << endl;
+	cout << "num of elements : " << cont.GetNumOfElements() << endl;
+	
+	cout << "get First : " << *(cont.GetFirst()) << endl;
+	cout << "get Last : " << *(cont.GetLast()) << endl;
+	cout << "/-----------------------------------------------------/" << endl;
+	
+	cout << *(cont.Remove(arrOfInts[0])) << " was removed." << endl; 
+	
+	cout << "get First : " << *(cont.GetFirst()) << endl;
+	
+	findRes = cont.Find(arrOfInts[0]);
+	if(findRes){
+		cout << *findRes << " was found" << endl;
+	}else{
+		cout << arrOfInts[0] << " was not found" << endl;
+	}
+	
+	findRes = cont.Find(arrOfInts[1]);
+	if(findRes){
+		cout << *findRes << " was found" << endl;
+	}else{
+		cout << arrOfInts[1] << " was not found" << endl;
+	}
+	cout << "/-----------------------------------------------------/" << endl;
+	
+	cont.RemoveAll();
+	cout << "remove all !!!" <<endl;
+	cout << "is empty : " << cont.IsEmpty() << endl;
+	cout << "/-----------------------------------------------------/" << endl;
+	
+	
+	/*-------------------------------------------*/
+	
+	
+	int* toInsert1 = new int;
+	*toInsert1 = 5;
+	cont.Insert(toInsert1);	
+	
+	cout << "item has been inserted" <<endl;
+	cout << "num of elements : " << cont.GetNumOfElements() << endl;
+		
+	cont.RemoveAndDelete(5);
+	cout << "removed and delete item" <<endl;
+	cout << "num of elements : " << cont.GetNumOfElements() << endl;
+	cout << "/-----------------------------------------------------/" << endl;
+	
+	
+	toInsert1 = new int;
+	*toInsert1 = 5;
+	int* toInsert2 = new int;
+	*toInsert2 = 7;
+	
+	cont.Insert(toInsert1);	
+	cont.Insert(toInsert2);	
+	
+	cout << "2 items have been inserted" <<endl;
+	cout << "num of elements : " << cont.GetNumOfElements() << endl;
+	
+
+	cont.RemoveAndDeleteAll();
+	cout << "remove and delete all !!!" << endl;
+	cout << "num of elements : " << cont.GetNumOfElements() << endl;
+	cout << "/-----------------------------------------------------/" << endl;
+	
+	
+	toInsert1 = new int;
+	*toInsert1 = 5;
+	toInsert2 = new int;
+	*toInsert2 = 7;
+	
+	cont.Insert(toInsert1);	
+	cont.Insert(toInsert2);	
+	cout << "2 items have been inserted" <<endl;
+	cout << "num of elements : " << cont.GetNumOfElements() << endl;
+	
+	cout << "item on index 0 : " << *cont[0] << endl;
+	cout << "item on index 1 : " << *cont[1] << endl;
+	cout << "/-----------------------------------------------------/" << endl;
+
+	cont.RemoveAndDeleteAll();
+	
+}
+
+/*------------------------------------------------------------------------------------*/
+
+
+
+

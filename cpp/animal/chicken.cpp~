@@ -1,0 +1,74 @@
+#include <string.h>
+#include <iostream>
+
+#include "chicken.h"
+
+using namespace std;
+
+enum{MIN_ID=1001, MAX_ID=2000};
+
+/*--------------------------------------------------------------------------------*/
+
+int Chicken::m_numOfChickens = MIN_ID;
+
+/*--------------------------------------------------------------------------------*/
+
+Chicken::Chicken()       //private ctor
+{
+}
+
+
+Chicken::~Chicken()    //dtor
+{   		  	 
+}
+
+
+Chicken::Chicken(const char* _name, int _id) : Animal(_name, _id)   //private ctor
+{	
+}
+
+
+Chicken::Chicken(const Chicken& _chickenToCpy) : Animal(_chickenToCpy)   //private copy ctor
+{
+}
+
+/*--------------------------------------------------------------------------------*/
+
+
+void Chicken::Show() const
+{
+	cout << "CHICKEN ";  
+	Animal::Show();
+}
+
+/*--------------------------------------------------------------------------------*/
+
+void Chicken::MakeSound() const
+{
+	cout << "KoooooKorikoooooo KoooooKorikoooooo" << endl;
+}		
+	
+	
+/*--------------------------------------------------------------------------------*/
+
+
+Chicken* Chicken::createInstance(const char* _name)
+{
+	if( m_numOfChickens > MAX_ID ){
+		cout << "can not create anymore Chickens !!!!!!!!!!!!!!!!!!!!!!" << endl;
+		return NULL;
+	}	
+	
+	Chicken* duck = new Chicken(_name, m_numOfChickens++ );
+	return duck;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

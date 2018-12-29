@@ -1,0 +1,2 @@
+bitset.o: bitset.cpp ../Ainclude/bitset.h
+test.o: test/test.cpp ../Ainclude/bitset.h

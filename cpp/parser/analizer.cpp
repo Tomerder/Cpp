@@ -1,0 +1,190 @@
+#include <string.h>
+#include <iostream>
+
+#include "analizer.h"
+
+using namespace std;
+
+/*--------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------------------*/	
+
+void Analizer::AddSymbols(const vector<string>& _symbols)
+{
+	for(size_t i=0; i < _symbols.size() ; i++){
+		AddSymbol(_symbols[i]);
+	}
+}
+
+void Analizer::AddTypes(const vector<string>& _types)
+{
+	for(size_t i=0; i < _types.size() ; i++){
+		AddType(_types[i]);
+	}
+}
+
+
+/*--------------------------------------------------------------------------------*/	
+
+void Analizer::Analize()
+{
+	string token;
+	string prevToken;
+	string prevPrevToken;
+	
+	if(m_isFirstToken){
+		token =  m_tokensToAnalize.front();
+		m_tokensToAnalize.pop_front();
+		if( token != "main" ){
+			m_errors.push_back( Error(MAIN_E , m_lineNum) );		
+		}
+		m_isFirstToken = false;	
+	}
+
+	while(!m_tokensToAnalize.empty()){
+		/*get cur token and prev tokens*/
+		token =  m_tokensToAnalize.front();
+		m_tokensToAnalize.pop_front();
+
+		prevToken = m_lastTokens[NUM_OF_TokenS_TO_SAV-1]  ;
+		prevPrevToken = m_lastTokens[NUM_OF_TokenS_TO_SAV-2]  ;
+
+		/*set prev tokens for next round*/
+		m_lastTokens[NUM_OF_TokenS_TO_SAV-2] = m_lastTokens[NUM_OF_TokenS_TO_SAV-1]; 
+		m_lastTokens[NUM_OF_TokenS_TO_SAV-1] = token;
+
+		/*if token is not a symbol*/
+		if( m_symbolTable.find(token) == m_symbolTable.end() ){
+			/*if prevToken is not a type */
+			if(  m_types.find(prevToken) == m_types.end()   ){
+				m_errors.push_back( Error(NOT_DEF_E , m_lineNum , token) );
+				continue;
+			}
+			else /*prevToken is a type  =>  int i  */  
+			{
+				m_vars.insert(token);
+				m_symbolTable.insert(token);
+			}
+		}
+
+		/*if token is a type */
+		if( m_types.find(token) != m_types.end() ){
+			/*if prevToken is a type */
+			if( m_types.find(prevToken) != m_types.end()   ){
+				m_errors.push_back( Error(MUL_TYPE_E , m_lineNum) );
+				continue;
+			}
+		}
+
+		/*if else check*/
+		if(token == "if"){
+			m_wasIfFlag = true;
+			continue;
+		}
+		
+		if(token == "else"){
+			if(m_wasIfFlag){
+				m_wasIfFlag = false;
+				continue;
+			}else{
+				m_errors.push_back( Error(ELSE_E , m_lineNum) );
+				continue;
+			}
+		}
+
+		/* +++ --- check */
+		if(token == "+"){
+			if(prevToken == "+" && prevPrevToken == "+"){
+				m_errors.push_back( Error(OPR_PPP_E , m_lineNum) );
+				continue;
+			}
+		}
+
+		if(token == "-"){
+			if(prevToken == "-" && prevPrevToken == "-"){
+				m_errors.push_back( Error(OPR_MMM_E , m_lineNum) );
+				continue;
+			}
+		}
+
+		/* braces check*/
+		if(token == "{"){
+			++m_countBraces[0] ; 
+		}else if(token == "}"){
+			--m_countBraces[0] ;
+		}else if(token == "("){
+			++m_countBraces[1] ; 		
+		}else if(token == ")"){
+			--m_countBraces[1] ; 		
+		}else if(token == "["){
+			++m_countBraces[2] ; 		
+		}else if(token == "]"){
+			--m_countBraces[2] ; 		
+		}else if(token == "<"){
+			++m_countBraces[3] ; 		
+		}else if(token == ">"){
+			--m_countBraces[3] ; 		
+		}
+
+		if(m_countBraces[0] < 0){
+			m_countBraces[0] = 0;
+			m_errors.push_back( Error(BRC_E , m_lineNum , "}") );
+			continue;
+		}else if(m_countBraces[1] < 0){
+			m_countBraces[1] = 0;
+			m_errors.push_back( Error(BRC_E , m_lineNum , ")" ));
+			continue;
+		}else if(m_countBraces[2] < 0){
+			m_countBraces[2] = 0;
+			m_errors.push_back( Error(BRC_E , m_lineNum , "]") );
+			continue;
+		}else if(m_countBraces[3] < 0){
+			m_countBraces[3] = 0;
+			m_errors.push_back( Error(BRC_E , m_lineNum , ">") );
+			continue;
+		}    
+
+	}
+
+}
+
+/*--------------------------------------------------------------------------------*/	
+
+void Analizer::AnalizeEnd()
+{
+	if(m_countBraces[0] > 0){
+		m_errors.push_back( Error(BRC_NC_E , m_lineNum , "{") );
+	}
+
+	if(m_countBraces[1] > 0){
+		m_errors.push_back( Error(BRC_NC_E , m_lineNum , "(") );
+	}
+		
+	if(m_countBraces[2] > 0){
+		m_errors.push_back( Error(BRC_NC_E , m_lineNum , "[") );
+	}
+	
+	if(m_countBraces[3] > 0){
+		m_errors.push_back( Error(BRC_NC_E , m_lineNum , "<") );
+	}   
+}
+
+/*--------------------------------------------------------------------------------*/	
+
+void Analizer::PrintErrors() const
+{
+	for(size_t i=0; i<m_errors.size(); i++ ){
+		m_errors[i].Print();
+	}
+
+}
+
+/*--------------------------------------------------------------------------------*/	
+
+
+
+
+	
+	
+

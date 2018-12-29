@@ -1,0 +1,12 @@
+Design Patterns - excercise 1 - plan
+
+
+class Bank - subject & singleton
+
+class account - observer (of single subject)
+	contains: amount of money, saving period, start date
+
+3 implementations of account - through bridge, factory
+
+	family account - vector of owners
+

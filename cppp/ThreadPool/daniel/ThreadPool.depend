@@ -1,0 +1,138 @@
+# depslib dependency file v1.0
+1397136490 source:/home/student/Ex/2014_04_07/ThreadPool/mutex.cpp
+	<pthread.h>
+	<stdexcept>
+	"mutex.h"
+
+1397136514 /home/student/Ex/2014_04_07/ThreadPool/mutex.h
+	<pthread.h>
+
+1397136502 source:/home/student/Ex/2014_04_07/ThreadPool/semaphore.cpp
+	<semaphore.h>
+	<stdexcept>
+	"semaphore.h"
+
+1397136492 /home/student/Ex/2014_04_07/ThreadPool/semaphore.h
+	<semaphore.h>
+
+1397143818 source:/home/student/Ex/2014_04_07/ThreadPool/main.cpp
+	<iostream>
+	<unistd.h>
+	"semaphore.h"
+	"mutex.h"
+	"thread.h"
+	"priorityqueue.h"
+	"runnable.h"
+
+1397136484 /home/student/Ex/2014_04_07/ThreadPool/thread.h
+	<pthread.h>
+	"runnable.h"
+
+1397371532 /home/student/Ex/2014_04_07/ThreadPool/priorityqueue.h
+	<queue>
+	"semaphore.h"
+	"mutex.h"
+
+1397147317 source:/home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/main.cpp
+	<iostream>
+	<unistd.h>
+	"semaphore.h"
+	"mutex.h"
+	"thread.h"
+	"priorityqueue.h"
+	"runnable.h"
+
+1396941153 /home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/semaphore.h
+	<semaphore.h>
+
+1396946226 /home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/mutex.h
+	<pthread.h>
+
+1397147284 /home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/thread.h
+	<pthread.h>
+	"runnable.h"
+
+1396957032 /home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/priorityqueue.h
+	<queue>
+	"semaphore.h"
+	"mutex.h"
+
+1397064856 source:/home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/mutex.cpp
+	<pthread.h>
+	<stdexcept>
+	"mutex.h"
+
+1397064786 source:/home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/semaphore.cpp
+	<semaphore.h>
+	<stdexcept>
+	"semaphore.h"
+
+1397322152 /home/student/Ex/2014_04_07/ThreadPool/runnable.h
+
+1397325700 source:/home/student/Ex/2014_04_07/ThreadPool/thread.cpp
+	<iostream>
+	<pthread.h>
+	<time.h>
+	<sys/time.h>
+	<errno.h>
+	<stdexcept>
+	"thread.h"
+
+1397372723 source:/home/student/Ex/2014_04_07/ThreadPool/threadpool.cpp
+	<tr1/memory>
+	<iostream>
+	<list>
+	<unistd.h>
+	<exception>
+	"threadpool.h"
+	"priorityqueue.h"
+
+1397372685 /home/student/Ex/2014_04_07/ThreadPool/threadpool.h
+	<list>
+	<map>
+	<tr1/memory>
+	"priorityqueue.h"
+	"thread.h"
+	"runnable.h"
+	"mutex.h"
+
+1397332952 /home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/runnable.h
+
+1397336500 source:/home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/thread.cpp
+	<iostream>
+	<pthread.h>
+	<time.h>
+	<sys/time.h>
+	<errno.h>
+	<stdexcept>
+	"thread.h"
+
+1397336519 source:/home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/threadpool.cpp
+	<tr1/memory>
+	<iostream>
+	<list>
+	<unistd.h>
+	<exception>
+	"threadpool.h"
+	"priorityqueue.h"
+
+1397334309 /home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/threadpool.h
+	<list>
+	<map>
+	<tr1/memory>
+	"priorityqueue.h"
+	"thread.h"
+	"runnable.h"
+	"mutex.h"
+
+1397336720 source:/home/farko/Dropbox/ExperisHW/My/2014_04_07/ThreadPool/IntegralCalc.cpp
+	<iostream>
+	"threadpool.h"
+	"runnable.h"
+
+1397374050 source:/home/student/Ex/2014_04_07/ThreadPool/IntegralCalc.cpp
+	<iostream>
+	<unistd.h>
+	"threadpool.h"
+	"runnable.h"
+

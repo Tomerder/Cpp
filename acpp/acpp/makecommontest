@@ -1,0 +1,14 @@
+CC=g++
+INC=../../Ainclude
+CPPFLAGS= -ansi -pedantic -Wall -DUNIX $(LDFLAGS) -g
+
+test:
+	$(CC) $(CPPFLAGS) main.cpp -c -I $(INC) 
+	$(CC) $(TESTOBJS) $(LIBDIR)libmy.a $(LDFLAGS) -o unitTest
+	./unitTest > output
+#	rm unitTest
+	diff output result
+	rm output
+	
+clean:
+	rm depends unitTest main.o

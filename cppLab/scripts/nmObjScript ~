@@ -1,0 +1,12 @@
+#compile and nm object
+g+ -c $1.cpp -o $1.o
+echo "nm object"
+nm $1.o
+
+#compile and nm exe
+g+ $1.o -o $1
+echo "nm --demangle exe"
+nm --demangle $1
+
+#clean object
+rm $1.o

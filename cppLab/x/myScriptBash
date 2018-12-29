@@ -1,0 +1,3 @@
+echo "MyScript"
+alias g+="g++ -ansi -pedantic -Wall -g"
+alias lab="source ~/cpp/test/labScript"

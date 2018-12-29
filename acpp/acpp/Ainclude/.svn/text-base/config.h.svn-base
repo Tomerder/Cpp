@@ -1,0 +1,45 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#include "uncopyable.h"
+
+class Config : private Uncopyable {
+public:
+#ifdef WIN32
+	Config( std::string _hive, std::string _company, std::string _product);
+#elif UNIX
+	Config();
+#else
+#error only supporrts WIN32 and UNIX
+#endif //#ifdef WIN32
+
+	~Config();
+
+	template <class T>
+	T Get( std::string _confName, T _defaultVal) const;
+
+	template <class T>
+	void Set( std::string _confName, T _val);
+
+private:
+	const std::string m_path;
+};
+
+template<>
+int Config::Get<int>(std::string _confName, int _defaultVal) const;	//in cpp file
+template<>
+std::string Config::Get<std::string>(std::string _confName, std::string _defaultVal) const;	//in cpp file
+template<>
+double Config::Get<int>(std::string _confName, double _defaultVal) const;	//in cpp file
+
+// if trying to call a function with another type - you get a compilation error
+template <class T>
+T Config::Get(std::string _confName, T _defaultVal) const	//in cpp file
+{
+	NoSupportForThisType t;
+}
+
+#endif	// #ifndef CONFIG_H
+
+
+

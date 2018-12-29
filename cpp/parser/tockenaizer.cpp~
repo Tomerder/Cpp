@@ -1,0 +1,58 @@
+#include <string.h>
+#include <iostream>
+
+#include "parser.h"
+
+using namespace std;
+
+/*--------------------------------------------------------------------------------*/
+/*
+void Tockenaizer::AddDelimiters(string _delimiters)
+{
+	for(unsigned int i=0; i<_delimiters.length() ; i++){
+		AddDelimiter (_delimiters[i]);
+	}
+} 	
+*/
+/*--------------------------------------------------------------------------------*/	
+/*set   deque<string> m_tockensCreated   from    string m_lineToTockenize*/
+size_t Tockenaizer::CreateTockens()
+{
+	size_t numOfTockens=0;
+	
+	size_t pos = 0;
+	string token;
+	
+	m_tockensCreated.clear();
+	
+	while ( (pos != string::npos) ){
+		cout << "m_lineToTockenize : " << m_lineToTockenize << endl;
+		pos = m_lineToTockenize.find_first_of(m_delimiters) ;
+		cout << "pos : " << pos << endl;
+		++numOfTockens;
+		token = m_lineToTockenize.substr(0, pos);
+		cout << token << endl;
+		cout << m_lineToTockenize[pos] << endl;
+		m_tockensCreated.push_back(token);
+		m_lineToTockenize.erase(0, pos+1);
+	}	
+
+	return numOfTockens;
+}
+
+/*--------------------------------------------------------------------------------*/	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+

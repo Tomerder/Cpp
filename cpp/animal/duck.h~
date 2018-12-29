@@ -1,0 +1,35 @@
+/**************************************************************************************
+    Author : Tomer Dery
+    Creation date :      28.12.13
+    Date last modified : 28.12.13
+    Description : student.h 
+***************************************************************************************/
+#ifndef __DUCK_H__
+#define __DUCK_H__
+
+#include "animal.h"
+
+
+class Duck : public Animal {
+
+private: 
+	static int m_numOfDucks;	
+	
+	Duck();    //private Ctor
+	Duck(const char* _name, int _id);   //private Ctor
+	Duck(const Duck& _cowToCpy);   //private Copy Ctor
+	
+public: 	
+	~Duck();
+	
+	static Duck* createInstance(const char* _name);  //method of creating objects
+	
+	void Show() const;
+	void MakeSound() const;	
+};
+
+
+	
+#endif /*__COW_H__*/
+
+

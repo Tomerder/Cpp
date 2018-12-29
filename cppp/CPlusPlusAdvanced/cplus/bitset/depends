@@ -1,0 +1,1 @@
+bitset.o: bitset.cpp ../Ainclude/bitset.h
